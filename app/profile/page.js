@@ -58,7 +58,7 @@ function MobileMenu() {
         <div className="mobile-menu-links">
           <a href="/archive"><span>ARCHIVE</span><small>01</small></a>
           <a href="/profile"><span>PROFILE</span><small>02</small></a>
-          <a href="/#contact"><span>CONTACT</span><small>03</small></a>
+          <a href="/contact"><span>CONTACT</span><small>03</small></a>
           <span className="mobile-menu-disabled"><span>CV</span><small>04</small></span>
         </div>
         <div className="mobile-menu-foot"><span>SPORTS / BRANDS / PEOPLE / EXPERIENCES</span></div>
@@ -80,7 +80,7 @@ export default function ProfilePage() {
         <nav className="desktop-nav" aria-label="Primary navigation">
           <a href="/archive">ARCHIVE</a>
           <a className="nav-active" href="/profile">PROFILE</a>
-          <a href="/#contact">CONTACT</a>
+          <a href="/contact">CONTACT</a>
           <span className="nav-disabled">CV</span>
         </nav>
         <MobileMenu />
@@ -187,14 +187,14 @@ export default function ProfilePage() {
           <p>I am particularly interested in sponsorship activation, brand experience, event management, fan experience and brand partnerships within international sports environments.</p>
           <div className="profile-cta-row">
             <a className="text-link" href="/archive">VIEW THE ARCHIVE <span className="ui-arrow ui-arrow-right" aria-hidden="true" /></a>
-            <a className="text-link" href="/#contact">GET IN TOUCH <span className="ui-arrow ui-arrow-right" aria-hidden="true" /></a>
+            <a className="text-link" href="/contact">GET IN TOUCH <span className="ui-arrow ui-arrow-right" aria-hidden="true" /></a>
           </div>
         </div>
       </section>
 
       <footer className="footer shell section-rule">
         <div><strong>MARTA LAVIÑA</strong><p>Sports, brands & experiences.</p></div>
-        <div className="footer-links footer-links-pending"><span>Email</span><span>LinkedIn</span></div>
+        <div className="footer-links"><a href="mailto:mlavinaperez@gmail.com">Email</a><a href="https://www.linkedin.com/in/martalavinaperez" target="_blank" rel="noreferrer">LinkedIn</a></div>
         <div className="legal"><p>© Marta Laviña 2026</p><p><span>Legal</span> · <span>Privacy</span></p></div>
       </footer>
     </main>
