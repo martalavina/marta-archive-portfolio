@@ -37,7 +37,7 @@ function MobileMenu() {
       <div className="mobile-menu-panel">
         <div className="mobile-menu-top">
           <span>MARTA LAVIÑA</span>
-          <span className="mobile-menu-close">×</span>
+          <span className="mobile-menu-close" aria-hidden="true">×</span>
         </div>
         <div className="mobile-menu-links">
           <a href="/archive"><span>ARCHIVE</span><small>01</small></a>
@@ -70,7 +70,7 @@ export default function Home() {
           <h1>Marta Laviña</h1>
           <p className="hero-line">I think about what happens <em>around the game.</em></p>
           <p className="eyebrow">AN EDITORIAL ARCHIVE OF SPORTS, BRANDS & EXPERIENCES.</p>
-          <p className="intro">I’m Marta, a Sports Management student working across sponsorship, brand experience and events. I’m interested in the moments where strategy becomes something people can actually experience.</p>
+          <p className="intro"><span className="student-status">I’m currently completing my final year in Sports Management.</span> My work focuses on sponsorship, brand experience and events, especially the moments where strategy becomes something people can actually experience.</p>
           <p className="meta-row">MADRID / NICE · SPORTS MANAGEMENT · SPONSORSHIP · BRAND EXPERIENCE · EVENTS</p>
         </div>
 
@@ -110,16 +110,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="quick shell section-rule">
-        <h2>Looking for<br />something specific?</h2>
-        <div className="quick-links">
-          <a href="/archive"><span>01 / Explore the archive</span><Arrow /></a>
-          <a href="/profile"><span>02 / My profile</span><Arrow /></a>
-          <span className="quick-disabled"><span>03 / Download my CV</span><span>PDF TO BE ADDED</span></span>
-          <a href="/contact"><span>04 / Get in touch</span><Arrow /></a>
-        </div>
-      </section>
-
       <section className="interests shell section-rule">
         <h2>Currently<br />interested in</h2>
         <div className="interest-grid">
@@ -138,6 +128,16 @@ export default function Home() {
           <h2>Sport first. Business second.<br />Now I think about both.</h2>
           <p>Before studying the business of sport, I experienced it from the inside. That perspective still shapes how I think about fans, athletes, brands and events.</p>
           <a className="text-link" href="/profile">READ MY PROFILE <Arrow direction="up-right" /></a>
+        </div>
+      </section>
+
+      <section className="quick shell section-rule">
+        <h2>Looking for<br />something specific?</h2>
+        <div className="quick-links">
+          <a href="/archive"><span>01 / Explore the archive</span><Arrow /></a>
+          <a href="/profile"><span>02 / My profile</span><Arrow /></a>
+          <span className="quick-disabled"><span>03 / Download my CV</span><span>PDF TO BE ADDED</span></span>
+          <a href="/contact"><span>04 / Get in touch</span><Arrow /></a>
         </div>
       </section>
 
