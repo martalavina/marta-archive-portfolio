@@ -12,7 +12,7 @@
   right: 0;
   top: 82px;
   background: var(--sky);
-  opacity: .7;
+  opacity: .46;
   z-index: -1;
 }
 .archive-kicker,
@@ -63,12 +63,29 @@
   font-size: .66rem;
   letter-spacing: .12em;
 }
-.archive-lens-list span {
-  padding: 7px 10px 6px;
+.archive-lens-list button {
+  appearance: none;
   border: 1px solid var(--line);
   background: color-mix(in srgb, var(--cream) 76%, var(--butter));
+  color: var(--ink);
+  font: inherit;
+  letter-spacing: inherit;
+  padding: 7px 10px 6px;
+  cursor: pointer;
+  transition: background .18s ease, border-color .18s ease, color .18s ease;
 }
-.archive-lens-list span:first-child { background: var(--butter); }
+.archive-lens-list button:hover,
+.archive-lens-list button:focus-visible {
+  border-color: color-mix(in srgb, var(--ink) 45%, transparent);
+}
+.archive-lens-list button:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+.archive-lens-list .archive-lens-active {
+  background: var(--butter);
+  border-color: color-mix(in srgb, var(--ink) 32%, transparent);
+}
 
 .archive-index { padding-top: 24px; }
 .archive-index-heading { padding-bottom: 14px; }
@@ -137,7 +154,6 @@
   border-bottom: 1px solid var(--ink);
   padding-bottom: 3px;
 }
-.archive-project-link-pending { opacity: .45; border-bottom-style: dotted; }
 .archive-feature-mark {
   justify-self: end;
   display: flex;
@@ -152,7 +168,7 @@
 .archive-project-feature {
   padding-top: 34px;
   padding-bottom: 40px;
-  background: linear-gradient(90deg, color-mix(in srgb, var(--sky) 28%, transparent), transparent 52%);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--sky) 20%, transparent), transparent 52%);
 }
 .archive-project-feature h2 { font-size: clamp(3.9rem, 6.7vw, 7rem); max-width: 880px; }
 .archive-project-feature .archive-project-client { font-size: 1.62rem; }
@@ -179,13 +195,21 @@
 .archive-project-note .archive-project-client { font-size: 1.12rem; }
 .archive-project-note .archive-project-description { max-width: 580px; font-size: .89rem; }
 .archive-project-note::after { content: 'NOTE'; }
+.archive-empty {
+  margin: 0;
+  padding: 42px 0 48px;
+  border-top: 1px solid var(--line);
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.5rem;
+  color: var(--brown);
+}
 
 .archive-note {
   padding: 32px 0 38px;
   display: grid;
   grid-template-columns: 24% 1fr;
   gap: 40px;
-  background: linear-gradient(90deg, transparent 0 23.5%, color-mix(in srgb, var(--sage) 45%, transparent) 23.5% 100%);
+  background: linear-gradient(90deg, transparent 0 23.5%, color-mix(in srgb, var(--sage) 30%, transparent) 23.5% 100%);
 }
 .archive-note > p:not(.eyebrow) {
   max-width: 740px;
@@ -204,14 +228,14 @@
 
 @media (max-width: 780px) {
   .archive-hero { padding: 30px 0 36px; }
-  .archive-hero::before { width: 106px; height: 64px; top: 76px; opacity: .48; }
+  .archive-hero::before { width: 112px; height: 64px; top: 76px; right: -14px; opacity: .32; }
   .archive-kicker { font-size: .58rem; }
-  .archive-hero h1 { margin: 26px 0 24px; font-size: clamp(3.55rem, 16.5vw, 4.9rem); line-height: .88; }
+  .archive-hero h1 { margin: 26px 0 24px; font-size: clamp(3.35rem, 15.4vw, 4.65rem); line-height: .88; }
   .archive-intro { margin-left: 0; grid-template-columns: 1fr; gap: 12px; }
   .archive-intro p { font-size: 1.08rem; }
   .archive-lenses { grid-template-columns: 1fr; gap: 10px; }
   .archive-lens-list { gap: 7px; font-size: .58rem; }
-  .archive-lens-list span { padding: 6px 8px; }
+  .archive-lens-list button { padding: 7px 8px 6px; }
   .archive-project,
   .archive-project-case,
   .archive-project-study,
@@ -227,13 +251,13 @@
   .archive-project-case::after,
   .archive-project-study::after,
   .archive-project-note::after { display: none; }
-  .archive-project-feature { background: linear-gradient(90deg, color-mix(in srgb, var(--sky) 22%, transparent), transparent 76%); }
-  .archive-project-feature h2 { font-size: clamp(2.8rem, 12.8vw, 3.85rem); }
-  .archive-project-case h2 { font-size: clamp(2.25rem, 10.2vw, 3.3rem); }
-  .archive-project-study h2 { font-size: clamp(1.85rem, 8.4vw, 2.65rem); }
-  .archive-project-note h2 { font-size: clamp(1.55rem, 7vw, 2.15rem); }
+  .archive-project-feature { background: linear-gradient(90deg, color-mix(in srgb, var(--sky) 15%, transparent), transparent 76%); }
+  .archive-project-feature h2 { font-size: clamp(2.7rem, 12.2vw, 3.65rem); }
+  .archive-project-case h2 { font-size: clamp(2.15rem, 9.7vw, 3.15rem); }
+  .archive-project-study h2 { font-size: clamp(1.8rem, 8vw, 2.55rem); }
+  .archive-project-note h2 { font-size: clamp(1.5rem, 6.7vw, 2.05rem); }
   .archive-project-category { margin-bottom: 10px; font-size: .58rem; }
   .archive-project-description { font-size: .9rem; }
-  .archive-note { grid-template-columns: 1fr; gap: 12px; background: color-mix(in srgb, var(--sage) 42%, var(--cream)); }
+  .archive-note { grid-template-columns: 1fr; gap: 12px; background: color-mix(in srgb, var(--sage) 28%, var(--cream)); }
   .archive-note .text-link { grid-column: 1; }
 }
