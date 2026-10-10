@@ -34,7 +34,7 @@ export default function Home() {
       <header className="site-header shell">
         <a className="wordmark" href="#top">MARTA LAVIÑA</a>
         <nav aria-label="Primary navigation">
-          <a href="#archive">ARCHIVE</a>
+          <a href="/archive">ARCHIVE</a>
           <a href="#profile">PROFILE</a>
           <a href="#contact">CONTACT</a>
           <a href="/Marta-Lavina-CV.pdf" download>CV <Arrow direction="down" /></a>
@@ -74,7 +74,7 @@ export default function Home() {
                 <h3>{entry.title}</h3>
                 <p className="client">{entry.client}</p>
                 <p className="description">{entry.description}</p>
-                <a className="text-link" href="#">READ ENTRY <Arrow direction="up-right" /></a>
+                <a className="text-link" href="/archive">READ ENTRY <Arrow direction="up-right" /></a>
               </div>
             </article>
           ))}
@@ -84,7 +84,7 @@ export default function Home() {
       <section className="quick shell section-rule">
         <h2>Looking for<br />something specific?</h2>
         <div className="quick-links">
-          <a href="#archive"><span>01 — Explore the archive</span><Arrow /></a>
+          <a href="/archive"><span>01 — Explore the archive</span><Arrow /></a>
           <a href="#profile"><span>02 — My profile</span><Arrow /></a>
           <a href="/Marta-Lavina-CV.pdf" download><span>03 — Download my CV</span><Arrow direction="down" /></a>
           <a href="#contact"><span>04 — Get in touch</span><Arrow /></a>
