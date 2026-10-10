@@ -56,7 +56,7 @@ const projects = [
   {
     id: 'celta-ecoalf',
     code: 'ML-005',
-    date: '2026',
+    date: 'DEC 2025',
     type: 'STUDY',
     category: 'PARTNERSHIP STRATEGY / FOOTBALL',
     title: 'Afouteza Polo Planeta',
@@ -64,6 +64,7 @@ const projects = [
     client: 'Celta de Vigo × ECOALF',
     description: 'A purpose-led partnership study connecting Galician football culture, the Atlantic and environmental responsibility.',
     weight: 'study',
+    href: '/archive/celta-ecoalf',
   },
   {
     id: 'formula-1-governance',
