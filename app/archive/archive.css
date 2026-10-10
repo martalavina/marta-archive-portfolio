@@ -1,0 +1,261 @@
+.nav-active::after { transform: scaleX(1) !important; transform-origin: left !important; }
+
+.archive-hero {
+  padding: 52px 0 58px;
+}
+.archive-kicker,
+.archive-index-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: .68rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(52,37,30,.72);
+}
+.archive-hero h1 {
+  margin: 42px 0 34px;
+  max-width: 940px;
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(4.7rem, 9vw, 9.6rem);
+  line-height: .82;
+  letter-spacing: -.05em;
+  font-weight: 400;
+}
+.archive-hero h1 em {
+  color: #6da8da;
+  font-weight: 400;
+}
+.archive-intro {
+  margin-left: 42%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  color: var(--brown);
+}
+.archive-intro p {
+  margin: 0;
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.archive-lenses {
+  padding: 24px 0 28px;
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.archive-lens-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  font-size: .72rem;
+  letter-spacing: .13em;
+}
+.archive-lens-list span {
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--line);
+}
+
+.archive-index { padding-top: 24px; }
+.archive-index-heading { padding-bottom: 14px; }
+.archive-project {
+  position: relative;
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr) 110px;
+  gap: 28px;
+  border-top: 1px solid var(--line);
+  padding: 28px 0 30px;
+}
+.archive-project-num {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.35rem;
+}
+.archive-project-main { max-width: 900px; }
+.archive-project-category {
+  margin: 6px 0 18px;
+  font-size: .68rem;
+  letter-spacing: .14em;
+  color: rgba(52,37,30,.72);
+}
+.archive-project h2 {
+  margin: 0 0 8px;
+  font-family: 'Instrument Serif', serif;
+  font-weight: 400;
+  line-height: .94;
+  letter-spacing: -.035em;
+}
+.archive-project-client {
+  margin: 0 0 4px;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  color: var(--brown);
+}
+.archive-project-title {
+  margin: 0 0 12px;
+  font-size: .72rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(52,37,30,.72);
+}
+.archive-project-description {
+  max-width: 720px;
+  margin: 0 0 16px;
+  color: rgba(52,37,30,.86);
+  line-height: 1.5;
+}
+.archive-project-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: .68rem;
+  letter-spacing: .16em;
+  border-bottom: 1px solid var(--navy);
+  padding-bottom: 3px;
+}
+.archive-feature-mark {
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  min-height: 150px;
+  font-size: .62rem;
+  letter-spacing: .14em;
+  color: rgba(52,37,30,.6);
+}
+.archive-project-feature {
+  padding-top: 36px;
+  padding-bottom: 42px;
+}
+.archive-project-feature h2 {
+  font-size: clamp(4.1rem, 7vw, 7.6rem);
+  max-width: 900px;
+}
+.archive-project-feature .archive-project-client { font-size: 1.7rem; }
+.archive-project-feature .archive-project-description { font-size: 1.03rem; }
+
+.archive-project-case {
+  grid-template-columns: 88px minmax(0, 1fr) 110px;
+}
+.archive-project-case h2 {
+  font-size: clamp(2.9rem, 5.2vw, 5.8rem);
+  max-width: 860px;
+}
+.archive-project-case .archive-project-client { font-size: 1.48rem; }
+.archive-project-case::after {
+  content: 'CASE';
+  justify-self: end;
+  align-self: start;
+  font-size: .62rem;
+  letter-spacing: .15em;
+  color: rgba(52,37,30,.55);
+}
+
+.archive-project-study {
+  grid-template-columns: 88px minmax(0, 1fr) 110px;
+  padding-top: 24px;
+  padding-bottom: 26px;
+}
+.archive-project-study h2 {
+  font-size: clamp(2rem, 3.4vw, 3.8rem);
+  max-width: 760px;
+}
+.archive-project-study .archive-project-description {
+  max-width: 620px;
+  font-size: .93rem;
+}
+.archive-project-study::after {
+  content: 'STUDY';
+  justify-self: end;
+  font-size: .62rem;
+  letter-spacing: .15em;
+  color: rgba(52,37,30,.55);
+}
+
+.archive-project-note {
+  grid-template-columns: 88px minmax(0, 1fr) 110px;
+  padding-top: 20px;
+  padding-bottom: 22px;
+}
+.archive-project-note h2 {
+  font-size: clamp(1.65rem, 2.5vw, 2.7rem);
+  max-width: 680px;
+}
+.archive-project-note .archive-project-client { font-size: 1.15rem; }
+.archive-project-note .archive-project-description {
+  max-width: 580px;
+  font-size: .9rem;
+}
+.archive-project-note::after {
+  content: 'NOTE';
+  justify-self: end;
+  font-size: .62rem;
+  letter-spacing: .15em;
+  color: rgba(52,37,30,.55);
+}
+
+.archive-note {
+  padding: 34px 0 40px;
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  gap: 40px;
+}
+.archive-note > p:not(.eyebrow) {
+  max-width: 760px;
+  margin: 0 0 22px;
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(1.7rem, 3vw, 3rem);
+  line-height: 1.02;
+}
+.archive-note .text-link { grid-column: 2; justify-self: start; }
+
+@media (hover:hover) {
+  .archive-project:hover h2 { color: #568fc0; }
+  .archive-project h2 { transition: color .2s ease; }
+}
+
+@media (max-width: 780px) {
+  .archive-hero { padding: 30px 0 38px; }
+  .archive-kicker { font-size: .6rem; }
+  .archive-hero h1 {
+    margin: 28px 0 26px;
+    font-size: clamp(4.2rem, 20vw, 6.4rem);
+  }
+  .archive-intro {
+    margin-left: 0;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .archive-intro p { font-size: 1.18rem; }
+  .archive-lenses {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .archive-lens-list { gap: 8px 14px; font-size: .64rem; }
+  .archive-project,
+  .archive-project-case,
+  .archive-project-study,
+  .archive-project-note {
+    grid-template-columns: 36px 1fr;
+    gap: 10px;
+    padding: 22px 0 24px;
+  }
+  .archive-project-main { min-width: 0; }
+  .archive-feature-mark,
+  .archive-project-case::after,
+  .archive-project-study::after,
+  .archive-project-note::after { display: none; }
+  .archive-project-feature h2 { font-size: clamp(3.2rem, 14vw, 4.7rem); }
+  .archive-project-case h2 { font-size: clamp(2.55rem, 11.5vw, 4rem); }
+  .archive-project-study h2 { font-size: clamp(2rem, 9vw, 3rem); }
+  .archive-project-note h2 { font-size: clamp(1.7rem, 7.8vw, 2.4rem); }
+  .archive-project-category { margin-bottom: 12px; }
+  .archive-project-description { font-size: .94rem; }
+  .archive-note {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .archive-note .text-link { grid-column: 1; }
+}
