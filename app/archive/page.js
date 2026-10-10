@@ -51,6 +51,7 @@ const projects = [
     client: 'Event Operations Case',
     description: 'An operational response to a VIP arrival bottleneck, covering guest flow, check-in, staffing and service recovery under time pressure.',
     weight: 'case',
+    href: '/archive/300-vip',
   },
   {
     id: 'celta-ecoalf',
