@@ -1,0 +1,360 @@
+/* Final cross-site polish: consistency, responsive behaviour and accessibility. */
+
+html { overflow-x: clip; }
+body { overflow-x: clip; }
+
+/* A single dark ink across the portfolio, including components with local palettes. */
+:root {
+  --ink: #11143b;
+  --navy: #11143b;
+  --blue: #11143b;
+  --line: rgba(17, 20, 59, 0.18);
+}
+
+/* Global interaction quality */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #11143b;
+  outline-offset: 4px;
+}
+
+.wordmark,
+.desktop-nav a,
+.text-link,
+.archive-project-link,
+.footer-links a { text-underline-offset: 4px; }
+
+.entry-meta,
+.archive-project-client,
+.archive-project-title,
+.client,
+.meta-row,
+.case-meta-top,
+.canada-meta-top,
+.skate-meta-top,
+.vip-meta-top,
+.celta-meta,
+.f1-meta { overflow-wrap: anywhere; }
+
+/* Home: colour should organise content rather than sit on top of it. */
+.interests {
+  background: linear-gradient(90deg, transparent 0 31.5%, color-mix(in srgb, var(--sage) 46%, var(--cream)) 31.5% 100%);
+}
+.quick::after { opacity: .14; }
+.hero::after { opacity: .72; }
+.cv-cta { background: color-mix(in srgb, var(--butter) 34%, transparent); }
+.student-status { font-weight: 500; }
+
+/* Archive */
+.archive-hero::before { opacity: .3; }
+.archive-project-feature {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--sky) 15%, transparent), transparent 55%);
+}
+.archive-note {
+  background: linear-gradient(90deg, transparent 0 23.5%, color-mix(in srgb, var(--sage) 22%, transparent) 23.5% 100%);
+}
+.archive-lens-list button {
+  min-height: 34px;
+  border-color: color-mix(in srgb, var(--ink) 16%, transparent);
+  background: transparent;
+}
+.archive-lens-list .archive-lens-active {
+  background: color-mix(in srgb, var(--butter) 72%, var(--cream));
+  border-color: color-mix(in srgb, var(--ink) 34%, transparent);
+}
+
+/* Profile: only soften decorative colour, never the content blocks that carry meaning. */
+.profile-hero::before { opacity: .38; }
+.profile-perspective { background: color-mix(in srgb, var(--butter) 46%, var(--cream)); }
+.profile-now-grid > div:first-child { background: color-mix(in srgb, var(--sky) 18%, transparent); }
+.profile-sport { background: color-mix(in srgb, var(--sage) 42%, var(--cream)); }
+.profile-looking { background: color-mix(in srgb, var(--butter) 32%, transparent); }
+
+/* IKEA: preserve the project coding while reducing decorative saturation. */
+.ikea-case .case-opportunity {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--sky) 28%, var(--cream)) 0 52%, transparent 52%);
+}
+.ikea-case .experience-row-1 {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--sky) 12%, transparent), transparent 62%);
+}
+.ikea-case .experience-row-2 {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--butter) 28%, transparent), transparent 62%);
+}
+.ikea-case .experience-row-3 {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--sage) 18%, transparent), transparent 62%);
+}
+.ikea-case .case-capacity { background: color-mix(in srgb, var(--sage) 36%, var(--cream)); }
+.ikea-case .process-grid { background: color-mix(in srgb, var(--sky) 15%, transparent); }
+.ikea-case .case-close {
+  background: linear-gradient(90deg, transparent 0 70%, color-mix(in srgb, var(--sage) 36%, transparent) 70% 100%);
+}
+
+/* Canada: solid campaign moments stay red; secondary blush is quieter. */
+.canada-case .canada-hero-side {
+  background: color-mix(in srgb, var(--canada-blush) 42%, var(--cream));
+}
+.canada-case .diagnosis-right {
+  background: color-mix(in srgb, var(--canada-blush) 38%, var(--cream));
+}
+.canada-case .canada-platform {
+  background: linear-gradient(90deg, transparent 0 18%, color-mix(in srgb, var(--canada-blush) 30%, transparent) 18% 100%);
+}
+.canada-case .canada-process-grid {
+  background: color-mix(in srgb, var(--canada-blush) 27%, transparent);
+}
+
+/* Swarovski: keep the ice language, reduce the decorative haze. */
+.swarovski-case .skate-insight {
+  background: linear-gradient(90deg, transparent 0 54%, color-mix(in srgb, var(--skate-ice) 48%, transparent) 54% 100%);
+}
+.swarovski-case .skate-fit { background: color-mix(in srgb, var(--skate-lilac) 38%, var(--cream)); }
+.swarovski-case .skate-hero-activation {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--skate-ice) 38%, transparent), transparent 76%);
+}
+.swarovski-case .skate-real { background: color-mix(in srgb, var(--sage) 27%, var(--cream)); }
+.swarovski-case .skate-process { background: color-mix(in srgb, var(--skate-ice) 26%, var(--cream)); }
+
+/* Secondary cases: keep strong information blocks intact, just normalise spacing. */
+.vip-case .vip-situation,
+.vip-case .vip-math,
+.vip-case .vip-priorities,
+.vip-case .vip-assess,
+.vip-case .vip-flow,
+.vip-case .vip-command,
+.vip-case .vip-command-model,
+.vip-case .vip-experience,
+.vip-case .vip-measure,
+.vip-case .vip-after,
+.vip-case .vip-close,
+.celta-case .celta-opportunity,
+.celta-case .celta-context,
+.celta-case .celta-platform,
+.celta-case .celta-flagship,
+.celta-case .celta-system,
+.celta-case .celta-rights,
+.celta-case .celta-credibility,
+.celta-case .celta-measure,
+.celta-case .celta-reflection,
+.celta-case .celta-close,
+.f1-note .f1-thesis,
+.f1-note .f1-actors,
+.f1-note .f1-framework,
+.f1-note .f1-questions,
+.f1-note .f1-case,
+.f1-note .f1-tension,
+.f1-note .f1-close { scroll-margin-top: 86px; }
+
+@media (max-width: 780px) {
+  /* Mobile navigation: remove the Safari fixed-position/backdrop-filter conflict. */
+  .site-header {
+    min-height: 58px;
+    background: var(--cream);
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  .site-header:has(.mobile-nav[open]) {
+    background: var(--cream);
+    border-bottom-color: transparent;
+  }
+  .mobile-nav { position: static; }
+  .mobile-nav > summary {
+    min-width: 44px;
+    min-height: 44px;
+    display: grid;
+    place-items: center;
+    margin-right: -8px;
+    position: relative;
+    z-index: 101;
+  }
+  .mobile-nav[open] > summary {
+    position: fixed;
+    top: 7px;
+    right: 14px;
+    z-index: 121;
+    margin: 0;
+    color: transparent;
+    font-size: 0;
+  }
+  .mobile-nav[open] > summary::after {
+    content: '×';
+    color: var(--cream);
+    font-family: 'Instrument Serif', serif;
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .mobile-menu-panel {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100dvh !important;
+    min-height: 100vh;
+    z-index: 120 !important;
+    background: #47322a !important;
+    color: #ede6dd !important;
+    opacity: 1 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  .mobile-menu-close { visibility: hidden; }
+
+  /* One clean text axis. Decorative backgrounds bleed to the mobile gutter instead. */
+  .interests,
+  .profile-perspective,
+  .profile-sport,
+  .profile-looking {
+    margin-left: -14px;
+    margin-right: -14px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .interests { background: color-mix(in srgb, var(--sage) 32%, var(--cream)); }
+  .quick::after { right: -14px; width: 28vw; opacity: .1; }
+  .profile-hero::before { left: -14px; opacity: .26; }
+
+  /* Mobile type hierarchy: still editorial, but no page begins as a poster. */
+  .hero h1 { font-size: clamp(3.35rem, 15vw, 4.5rem); }
+  .archive-hero h1 { font-size: clamp(3.15rem, 14.5vw, 4.4rem); }
+  .profile-hero h1 { font-size: clamp(3.15rem, 14.5vw, 4.45rem); }
+  .contact-hero h1 { font-size: clamp(3.2rem, 14.8vw, 4.5rem); }
+  .ikea-case .case-hero h1,
+  .canada-case .canada-hero h1,
+  .swarovski-case .skate-hero h1,
+  .vip-case .vip-hero h1,
+  .celta-case .celta-hero h1,
+  .f1-note .f1-hero h1 { font-size: clamp(3.45rem, 15.6vw, 5rem); }
+
+  /* IKEA timeline: one continuous vertical line from Start to Final Hours. */
+  .ikea-case .fan-rhythm {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 0;
+    border-top: 0;
+    border-left: 1px solid var(--case-ink);
+    margin-left: 5px;
+  }
+  .ikea-case .fan-rhythm div { padding: 7px 0 24px 22px; }
+  .ikea-case .fan-rhythm div::before { top: 9px; left: -6px; }
+  .ikea-case .fan-rhythm div:last-child { padding-bottom: 4px; }
+  .ikea-case .case-opportunity {
+    margin-left: -14px;
+    margin-right: -14px;
+    padding-left: 14px;
+    padding-right: 14px;
+    background: color-mix(in srgb, var(--sky) 24%, var(--cream));
+  }
+  .ikea-case .experience-row-1,
+  .ikea-case .experience-row-2,
+  .ikea-case .experience-row-3 {
+    margin-left: -14px;
+    margin-right: -14px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .ikea-case .experience-row-1 { background: color-mix(in srgb, var(--sky) 12%, var(--cream)); }
+  .ikea-case .experience-row-2 { background: color-mix(in srgb, var(--butter) 28%, var(--cream)); }
+  .ikea-case .experience-row-3 { background: color-mix(in srgb, var(--sage) 18%, var(--cream)); }
+  .ikea-case .case-close { background: color-mix(in srgb, var(--sage) 27%, var(--cream)); }
+
+  /* Dense strategic equations need to read, not squeeze. */
+  .canada-case .canada-equation,
+  .swarovski-case .skate-equation {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 7px;
+    letter-spacing: .08em;
+  }
+  .canada-case .canada-equation strong,
+  .swarovski-case .skate-equation strong { transform: rotate(90deg); margin-left: 7px; }
+
+  /* Multi-column evidence systems collapse early enough to avoid cramped copy. */
+  .canada-case .canada-kpi-grid,
+  .swarovski-case .skate-kpi-grid,
+  .swarovski-case .skate-journey,
+  .swarovski-case .skate-runshow,
+  .swarovski-case .skate-real-grid,
+  .celta-case .celta-kpi-grid,
+  .f1-note .f1-question-grid { grid-template-columns: 1fr; }
+
+  .swarovski-case .skate-journey > div {
+    border-right: 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--skate-deep) 14%, transparent);
+  }
+  .swarovski-case .skate-journey > div:last-child { border-bottom: 0; }
+
+  /* Metadata should feel consistent across every case. */
+  .case-meta-top,
+  .canada-meta-top,
+  .skate-meta-top,
+  .vip-meta-top,
+  .celta-meta,
+  .f1-meta {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 7px 14px !important;
+    font-size: .55rem !important;
+    line-height: 1.35;
+  }
+
+  .vip-case .vip-situation,
+  .vip-case .vip-math,
+  .vip-case .vip-priorities,
+  .vip-case .vip-assess,
+  .vip-case .vip-flow,
+  .vip-case .vip-command,
+  .vip-case .vip-command-model,
+  .vip-case .vip-experience,
+  .vip-case .vip-measure,
+  .vip-case .vip-after,
+  .vip-case .vip-close,
+  .celta-case .celta-opportunity,
+  .celta-case .celta-context,
+  .celta-case .celta-platform,
+  .celta-case .celta-flagship,
+  .celta-case .celta-system,
+  .celta-case .celta-rights,
+  .celta-case .celta-credibility,
+  .celta-case .celta-measure,
+  .celta-case .celta-reflection,
+  .celta-case .celta-close,
+  .f1-note .f1-thesis,
+  .f1-note .f1-actors,
+  .f1-note .f1-framework,
+  .f1-note .f1-questions,
+  .f1-note .f1-case,
+  .f1-note .f1-tension,
+  .f1-note .f1-close { padding-top: 44px; padding-bottom: 44px; }
+
+  /* Small-screen hygiene */
+  .archive-project-client,
+  .archive-project-description,
+  .canada-activation-copy,
+  .vip-response-grid p,
+  .celta-two-col p,
+  .f1-case-grid p { overflow-wrap: anywhere; }
+
+  .footer { gap: 18px; padding-bottom: 30px; }
+}
+
+@media (max-width: 430px) {
+  .shell { width: calc(100% - 28px); }
+  .case-meta-top,
+  .canada-meta-top,
+  .skate-meta-top,
+  .vip-meta-top,
+  .celta-meta,
+  .f1-meta { grid-template-columns: 1fr !important; }
+
+  .archive-lens-list { gap: 6px; }
+  .archive-lens-list button { font-size: .56rem; padding-inline: 7px; }
+
+  .ikea-case .platform-index,
+  .canada-case .canada-audience-grid,
+  .canada-case .canada-channel-grid,
+  .swarovski-case .skate-platform-index,
+  .vip-case .vip-assess-grid,
+  .vip-case .vip-metric-grid,
+  .celta-case .celta-fit-grid,
+  .celta-case .celta-platform-grid { grid-template-columns: 1fr; }
+}
