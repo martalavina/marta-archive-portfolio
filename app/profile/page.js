@@ -157,7 +157,7 @@ export default function ProfilePage() {
         <div className="profile-language-grid">
           <div><span>01</span><h3>Spanish</h3><p>Native</p></div>
           <div><span>02</span><h3>English</h3><p>Professional working proficiency</p></div>
-          <div><span>03</span><h3>French</h3><p>C1</p></div>
+          <div><span>03</span><h3>French</h3><p>Professional working proficiency</p></div>
         </div>
       </section>
 
