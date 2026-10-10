@@ -1,3 +1,5 @@
+import './archive.css';
+
 const projects = [
   {
     code: 'ML—001',
