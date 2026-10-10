@@ -76,7 +76,7 @@ export default function Home() {
 
         <figure className="hero-image reveal-delay">
           <img
-            src="/marta-hero"
+            src="/marta-hero-v2"
             alt="Portrait of Marta Laviña outdoors in warm evening light"
           />
           <div className="hero-stamp" aria-hidden="true">
