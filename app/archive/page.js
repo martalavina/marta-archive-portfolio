@@ -12,6 +12,7 @@ const projects = [
     client: 'IKEA × 24H Le Mans',
     description: 'A sponsorship activation built around the human side of a 24-hour race: rest, food, comfort and participation as part of the fan experience.',
     weight: 'feature',
+    href: '/archive/ikea-le-mans',
   },
   {
     id: 'canada-soccer',
@@ -157,7 +158,11 @@ export default function ArchivePage() {
               <p className="archive-project-client">{project.client}</p>
               <p className="archive-project-title">{project.title}</p>
               <p className="archive-project-description">{project.description}</p>
-              <span className="archive-project-link archive-project-link-pending">FULL ENTRY IN DEVELOPMENT <Arrow /></span>
+              {project.href ? (
+                <a className="archive-project-link" href={project.href}>READ FULL CASE <Arrow /></a>
+              ) : (
+                <span className="archive-project-link archive-project-link-pending">FULL ENTRY IN DEVELOPMENT <Arrow /></span>
+              )}
             </div>
             {project.weight === 'feature' && (
               <div className="archive-feature-mark" aria-hidden="true">
