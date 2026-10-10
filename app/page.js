@@ -76,8 +76,8 @@ export default function Home() {
 
         <figure className="hero-image reveal-delay">
           <img
-            src="https://images.unsplash.com/photo-1693825948507-acd866203fae?auto=format&fit=crop&fm=jpg&q=82&w=1800"
-            alt="Spectator seated in a sports stadium"
+            src="/marta-hero.svg"
+            alt="Portrait of Marta Laviña outdoors in warm evening light"
           />
           <div className="hero-stamp" aria-hidden="true">
             <span>SPORTS</span>
@@ -85,7 +85,6 @@ export default function Home() {
             <span>PEOPLE</span>
             <span>PLACES</span>
           </div>
-          <figcaption>Temporary visual reference. Final image will be Marta’s own.</figcaption>
         </figure>
       </section>
 
