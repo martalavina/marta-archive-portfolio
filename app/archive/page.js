@@ -17,7 +17,7 @@ const projects = [
   {
     id: 'canada-soccer',
     code: 'ML-002',
-    date: 'JAN 2026',
+    date: '2026',
     type: 'CASE',
     category: 'CAMPAIGN / FOOTBALL',
     title: 'Our Game Now: The Host Nation Experience',
@@ -25,6 +25,7 @@ const projects = [
     client: 'Canada Soccer / Our Game Now',
     description: 'A strategic extension of an existing campaign into a physical, digital and participatory host-nation experience.',
     weight: 'case',
+    href: '/archive/canada-soccer',
   },
   {
     id: 'swarovski-figure-skating',
