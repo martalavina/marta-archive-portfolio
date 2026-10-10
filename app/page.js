@@ -6,7 +6,7 @@ const recentEntries = [
     title: 'What if endurance was about the fans too?',
     client: 'IKEA × 24H Le Mans',
     description: 'A fan experience concept built around the human side of a 24-hour race.',
-    href: '/archive#ikea-le-mans',
+    href: '/archive/ikea-le-mans',
   },
   {
     code: 'ML-002',
