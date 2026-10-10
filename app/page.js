@@ -30,17 +30,39 @@ function Arrow({ direction = 'right' }) {
   return <span className={`ui-arrow ui-arrow-${direction}`} aria-hidden="true" />;
 }
 
+function MobileMenu() {
+  return (
+    <details className="mobile-nav">
+      <summary>MENU</summary>
+      <div className="mobile-menu-panel">
+        <div className="mobile-menu-top">
+          <span>MARTA LAVIÑA</span>
+          <span className="mobile-menu-close">×</span>
+        </div>
+        <div className="mobile-menu-links">
+          <a href="/archive"><span>ARCHIVE</span><small>01</small></a>
+          <a href="/profile"><span>PROFILE</span><small>02</small></a>
+          <a href="#contact"><span>CONTACT</span><small>03</small></a>
+          <span className="mobile-menu-disabled"><span>CV</span><small>04</small></span>
+        </div>
+        <div className="mobile-menu-foot"><span>SPORTS / BRANDS / PEOPLE / EXPERIENCES</span></div>
+      </div>
+    </details>
+  );
+}
+
 export default function Home() {
   return (
     <main>
       <header className="site-header shell">
         <a className="wordmark" href="#top">MARTA LAVIÑA</a>
-        <nav aria-label="Primary navigation">
+        <nav className="desktop-nav" aria-label="Primary navigation">
           <a href="/archive">ARCHIVE</a>
           <a href="/profile">PROFILE</a>
           <a href="#contact">CONTACT</a>
           <span className="nav-disabled" aria-label="CV download will be enabled when the final PDF is added">CV</span>
         </nav>
+        <MobileMenu />
       </header>
 
       <section id="top" className="hero shell">
@@ -57,6 +79,12 @@ export default function Home() {
             src="https://images.unsplash.com/photo-1693825948507-acd866203fae?auto=format&fit=crop&fm=jpg&q=82&w=1800"
             alt="Spectator seated in a sports stadium"
           />
+          <div className="hero-stamp" aria-hidden="true">
+            <span>SPORTS</span>
+            <span>BRANDS</span>
+            <span>PEOPLE</span>
+            <span>PLACES</span>
+          </div>
           <figcaption>Temporary visual reference. Final image will be Marta’s own.</figcaption>
         </figure>
       </section>
@@ -105,7 +133,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="profile" className="profile-teaser shell section-rule">
+      <section className="profile-teaser shell section-rule">
         <p className="eyebrow">BEHIND THE ARCHIVE</p>
         <div>
           <h2>Sport first. Business second.<br />Now I think about both.</h2>
