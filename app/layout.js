@@ -1,5 +1,6 @@
 import './globals.css';
 import './color-override.css';
+import './polish.css';
 
 export const metadata = {
   title: 'Marta Laviña | Sports, Brands & Experiences',
