@@ -1,5 +1,31 @@
 :root {
   --ink: #11143b;
   --navy: #11143b;
+  --blue: #11143b;
   --line: rgba(17, 20, 59, 0.18);
+}
+
+body,
+.wordmark,
+.desktop-nav,
+.mobile-nav summary,
+.hero h1,
+.hero-line,
+.section-heading h2,
+.entry h3,
+.quick h2,
+.interests h2,
+.profile-teaser h2,
+.cv-placeholder,
+.archive-hero h1,
+.archive-project h2,
+.profile-hero h1,
+.profile-large-copy,
+.profile-now-grid h2,
+.profile-role h3,
+.profile-sport h2,
+.profile-looking h2,
+.profile-capability p,
+.profile-language-grid h3 {
+  color: #11143b;
 }
