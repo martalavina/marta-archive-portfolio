@@ -1,5 +1,3 @@
-import { HERO_IMAGE } from './heroData';
-
 const recentEntries = [
   {
     code: 'ML-001',
@@ -78,7 +76,7 @@ export default function Home() {
 
         <figure className="hero-image reveal-delay">
           <img
-            src={HERO_IMAGE}
+            src="/marta-hero"
             alt="Portrait of Marta Laviña outdoors in warm evening light"
           />
           <div className="hero-stamp" aria-hidden="true">
