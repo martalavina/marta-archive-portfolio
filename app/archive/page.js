@@ -91,7 +91,7 @@ export default function ArchivePage() {
         <a className="wordmark" href="/">MARTA LAVIÑA</a>
         <nav aria-label="Primary navigation">
           <a className="nav-active" href="/archive">ARCHIVE</a>
-          <a href="/#profile">PROFILE</a>
+          <a href="/profile">PROFILE</a>
           <a href="/#contact">CONTACT</a>
           <span className="nav-disabled" aria-label="CV download will be enabled when the final PDF is added">CV</span>
         </nav>
