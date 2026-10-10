@@ -68,6 +68,7 @@
   gap: 28px;
   border-top: 1px solid var(--line);
   padding: 28px 0 30px;
+  scroll-margin-top: 90px;
 }
 .archive-project-num {
   font-family: 'Instrument Serif', serif;
@@ -113,6 +114,10 @@
   letter-spacing: .16em;
   border-bottom: 1px solid var(--navy);
   padding-bottom: 3px;
+}
+.archive-project-link-pending {
+  opacity: .48;
+  border-bottom-style: dotted;
 }
 .archive-feature-mark {
   justify-self: end;
