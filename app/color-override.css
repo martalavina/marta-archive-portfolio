@@ -39,6 +39,12 @@ body,
   background: linear-gradient(90deg, transparent 0 31.5%, color-mix(in srgb, var(--sage) 52%, var(--cream)) 31.5% 100%);
 }
 .quick::after { opacity: .2; }
+.archive-project-feature { background: linear-gradient(90deg, color-mix(in srgb, var(--sky) 20%, transparent), transparent 52%); }
+
+/* Keep the experience colour system consistent between the platform index and detail rows. */
+.ikea-case .experience-row-3 {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--sage) 24%, transparent), transparent 56%);
+}
 
 /* Keyboard navigation */
 a:focus-visible,
@@ -94,4 +100,23 @@ textarea:focus-visible {
 
   /* Decorative blocks bleed beyond the text column so the copy keeps one clean axis. */
   .profile-hero::before { left: -14px; opacity: .34; }
+
+  /* One continuous mobile timeline is clearer than a desktop line broken across two rows. */
+  .ikea-case .fan-rhythm {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+    border-top: 0;
+    border-left: 1px solid var(--case-ink);
+    margin-left: 5px;
+  }
+  .ikea-case .fan-rhythm div {
+    padding: 8px 0 22px 22px;
+  }
+  .ikea-case .fan-rhythm div::before {
+    top: 10px;
+    left: -6px;
+  }
+  .ikea-case .experience-row-3 {
+    background: linear-gradient(90deg, color-mix(in srgb, var(--sage) 18%, transparent), transparent 82%);
+  }
 }
