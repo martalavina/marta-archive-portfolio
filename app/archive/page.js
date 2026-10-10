@@ -1,4 +1,5 @@
 import './archive.css';
+import ArchiveProjects from './ArchiveProjects';
 
 const projects = [
   {
@@ -7,6 +8,7 @@ const projects = [
     date: 'OCT 2026',
     type: 'FEATURE',
     category: 'SPONSORSHIP / FAN EXPERIENCE',
+    themes: ['SPONSORSHIP', 'FAN EXPERIENCE', 'BRAND'],
     title: 'The Human Side of Endurance',
     headline: 'What if endurance was about the fans too?',
     client: 'IKEA × 24H Le Mans',
@@ -20,6 +22,7 @@ const projects = [
     date: '19 MAY 2026',
     type: 'CASE',
     category: 'CAMPAIGN / FOOTBALL',
+    themes: ['CAMPAIGNS', 'BRAND', 'FAN EXPERIENCE'],
     title: 'Our Game Now: The Host Nation Experience',
     headline: 'A host nation should feel like one.',
     client: 'Canada Soccer / Our Game Now',
@@ -33,6 +36,7 @@ const projects = [
     date: 'MAR 2026',
     type: 'CASE',
     category: 'BRAND EXPERIENCE / FIGURE SKATING',
+    themes: ['BRAND', 'FAN EXPERIENCE', 'EVENTS'],
     title: 'From Performance to Experience',
     headline: 'What happens while the ice is empty?',
     client: 'Swarovski × World Junior Figure Skating Championships',
@@ -46,6 +50,7 @@ const projects = [
     date: 'SEP 2026',
     type: 'CASE',
     category: 'EVENT OPERATIONS / GUEST EXPERIENCE',
+    themes: ['EVENTS', 'FAN EXPERIENCE'],
     title: '300 VIP in 20 Minutes',
     headline: 'When the experience starts before the event does.',
     client: 'Event Operations Case',
@@ -59,6 +64,7 @@ const projects = [
     date: 'DEC 2025',
     type: 'STUDY',
     category: 'PARTNERSHIP STRATEGY / FOOTBALL',
+    themes: ['SPONSORSHIP', 'BRAND'],
     title: 'Afouteza Polo Planeta',
     headline: 'Can a partnership connect football identity with the place it comes from?',
     client: 'Celta de Vigo × ECOALF',
@@ -72,6 +78,7 @@ const projects = [
     date: '2026',
     type: 'NOTE',
     category: 'RESEARCH / MOTORSPORT',
+    themes: ['RESEARCH'],
     title: 'Who Controls Formula 1?',
     headline: 'Sport, regulation and commercial power.',
     client: 'Formula 1 Governance Study',
@@ -81,16 +88,12 @@ const projects = [
   },
 ];
 
-function Arrow() {
-  return <span className="ui-arrow ui-arrow-up-right" aria-hidden="true" />;
-}
-
 function MobileMenu() {
   return (
     <details className="mobile-nav">
       <summary>MENU</summary>
       <div className="mobile-menu-panel">
-        <div className="mobile-menu-top"><span>MARTA LAVIÑA</span><span className="mobile-menu-close">×</span></div>
+        <div className="mobile-menu-top"><span>MARTA LAVIÑA</span><span className="mobile-menu-close" aria-hidden="true">×</span></div>
         <div className="mobile-menu-links">
           <a href="/archive"><span>ARCHIVE</span><small>01</small></a>
           <a href="/profile"><span>PROFILE</span><small>02</small></a>
@@ -134,50 +137,7 @@ export default function ArchivePage() {
         </div>
       </section>
 
-      <section className="archive-lenses shell section-rule">
-        <p className="eyebrow">BROWSE THE ARCHIVE</p>
-        <div className="archive-lens-list" aria-label="Archive themes">
-          <span>ALL</span>
-          <span>SPONSORSHIP</span>
-          <span>FAN EXPERIENCE</span>
-          <span>EVENTS</span>
-          <span>BRAND</span>
-          <span>CAMPAIGNS</span>
-          <span>RESEARCH</span>
-        </div>
-      </section>
-
-      <section className="archive-index shell section-rule">
-        <div className="archive-index-heading">
-          <span>INDEX</span>
-          <span>{String(projects.length).padStart(2, '0')} ENTRIES</span>
-        </div>
-
-        {projects.map((project, index) => (
-          <article id={project.id} className={`archive-project archive-project-${project.weight}`} key={project.code}>
-            <div className="archive-project-num">{String(index + 1).padStart(2, '0')}</div>
-            <div className="archive-project-main">
-              <p className="entry-meta">{project.code} · {project.date} · {project.type}</p>
-              <p className="archive-project-category">{project.category}</p>
-              <h2>{project.headline}</h2>
-              <p className="archive-project-client">{project.client}</p>
-              <p className="archive-project-title">{project.title}</p>
-              <p className="archive-project-description">{project.description}</p>
-              {project.href ? (
-                <a className="archive-project-link" href={project.href}>READ FULL CASE <Arrow /></a>
-              ) : (
-                <span className="archive-project-link archive-project-link-pending">FULL ENTRY IN DEVELOPMENT <Arrow /></span>
-              )}
-            </div>
-            {project.weight === 'feature' && (
-              <div className="archive-feature-mark" aria-hidden="true">
-                <span>FEATURED</span>
-                <span>ML-001</span>
-              </div>
-            )}
-          </article>
-        ))}
-      </section>
+      <ArchiveProjects projects={projects} />
 
       <section className="archive-note shell section-rule">
         <p className="eyebrow">ABOUT THE ARCHIVE</p>
