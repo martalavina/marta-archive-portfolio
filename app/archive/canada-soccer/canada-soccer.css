@@ -1,0 +1,418 @@
+.canada-case {
+  --canada-red: #8f0d1a;
+  --canada-red-soft: #b72935;
+  --canada-blush: #f1d2d5;
+  --canada-ink: #11143b;
+}
+
+.canada-case .site-header { background: color-mix(in srgb, var(--cream) 94%, transparent); }
+.canada-case .nav-active::after { transform: scaleX(1) !important; transform-origin: left !important; }
+
+.canada-hero { padding: 50px 0 62px; }
+.canada-meta-top {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 18px;
+  justify-content: space-between;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+  font-size: .62rem;
+  letter-spacing: .14em;
+  color: color-mix(in srgb, var(--brown) 68%, transparent);
+}
+.canada-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 72px;
+  padding-top: 48px;
+  align-items: end;
+}
+.canada-kicker,
+.canada-section-label,
+.canada-mini-label {
+  font-size: .64rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.canada-kicker { color: var(--canada-red); margin: 0 0 16px; }
+.canada-hero h1,
+.canada-context h2,
+.canada-diagnosis h2,
+.canada-diagnosis h3,
+.canada-audience h2,
+.canada-platform h2,
+.canada-pulse h2,
+.canada-activation h2,
+.canada-ecosystem h2,
+.canada-measurement h2,
+.canada-process h2,
+.canada-close h2 {
+  font-family: 'Instrument Serif', serif;
+  font-weight: 400;
+}
+.canada-hero h1 {
+  margin: 0;
+  font-size: clamp(4.7rem, 8.3vw, 8.9rem);
+  line-height: .84;
+  letter-spacing: -.05em;
+}
+.canada-hero h1 em { color: var(--canada-red); }
+.canada-hero-side {
+  padding: 26px 28px;
+  background: color-mix(in srgb, var(--canada-blush) 60%, var(--cream));
+  border-left: 7px solid var(--canada-red);
+}
+.canada-proposition {
+  margin: 0 0 28px;
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(1.7rem, 2.8vw, 2.85rem);
+  line-height: 1.02;
+}
+.canada-role-list { display: flex; flex-wrap: wrap; gap: 8px 10px; }
+.canada-role-list span {
+  border: 1px solid color-mix(in srgb, var(--canada-ink) 18%, transparent);
+  padding: 7px 9px;
+  font-size: .6rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.canada-disclaimer {
+  margin: 34px 0 0 36%;
+  max-width: 760px;
+  color: color-mix(in srgb, var(--brown) 68%, transparent);
+  font-size: .7rem;
+  line-height: 1.5;
+}
+
+.canada-section-label { color: var(--canada-red); margin: 0; }
+.canada-context,
+.canada-diagnosis,
+.canada-audience,
+.canada-platform,
+.canada-pulse,
+.canada-activations,
+.canada-ecosystem,
+.canada-measurement,
+.canada-process,
+.canada-close { padding: 42px 0 52px; }
+
+.canada-context-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 68px;
+}
+.canada-context h2 {
+  margin: 0;
+  font-size: clamp(2.8rem, 4.8vw, 5.2rem);
+  line-height: .93;
+  letter-spacing: -.035em;
+}
+.canada-context-grid > div p {
+  margin: 0 0 15px;
+  color: var(--brown);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.canada-context-callout {
+  margin-top: 36px;
+  background: var(--canada-red);
+  color: var(--cream);
+  padding: 22px 26px;
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(1.8rem, 3vw, 3.1rem);
+  line-height: 1.02;
+}
+
+.canada-diagnosis-grid {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--line);
+}
+.diagnosis-left,
+.diagnosis-right { padding: 32px; }
+.diagnosis-left { background: var(--canada-red); color: var(--cream); }
+.diagnosis-right { background: color-mix(in srgb, var(--canada-blush) 54%, var(--cream)); }
+.canada-diagnosis h2,
+.canada-diagnosis h3 {
+  margin: 10px 0 14px;
+  font-size: clamp(2.4rem, 4vw, 4.3rem);
+  line-height: .95;
+}
+.canada-diagnosis h3 { font-size: clamp(2rem, 3.2vw, 3.3rem); }
+.canada-diagnosis p { margin: 0; line-height: 1.55; }
+.canada-equation {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1.25fr auto 1.9fr;
+  gap: 12px;
+  align-items: center;
+  margin-top: 22px;
+  padding: 16px 18px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: .68rem;
+  letter-spacing: .12em;
+}
+.canada-equation strong { color: var(--canada-red); font-size: 1.3rem; }
+
+.canada-audience-heading,
+.canada-measurement-heading,
+.canada-ecosystem-heading,
+.canada-process-intro {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 64px;
+  margin-top: 28px;
+  align-items: end;
+}
+.canada-audience h2,
+.canada-measurement h2,
+.canada-ecosystem h2,
+.canada-process h2 {
+  margin: 0;
+  font-size: clamp(2.8rem, 4.7vw, 5rem);
+  line-height: .93;
+  letter-spacing: -.035em;
+}
+.canada-audience h2 em,
+.canada-measurement h2 em { color: var(--canada-red); }
+.canada-audience-heading > p,
+.canada-measurement-heading > p,
+.canada-ecosystem-heading > p,
+.canada-process-intro > p {
+  margin: 0;
+  color: var(--brown);
+  line-height: 1.55;
+}
+.canada-audience-grid {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.canada-audience-grid article { padding: 26px 24px 30px; border-left: 1px solid var(--line); }
+.canada-audience-grid article:first-child { border-left: 0; }
+.canada-audience-grid article > span,
+.canada-kpi-grid article > span,
+.canada-process-grid > div > span { color: var(--canada-red); font-family: 'Instrument Serif', serif; font-size: 1.15rem; }
+.canada-audience-grid h3,
+.canada-kpi-grid h3,
+.canada-process-grid h3,
+.canada-channel-grid span {
+  margin: 14px 0 10px;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.canada-audience-grid p,
+.canada-kpi-grid p,
+.canada-process-grid p,
+.canada-channel-grid p { margin: 0; color: var(--brown); line-height: 1.5; }
+
+.canada-platform { background: linear-gradient(90deg, transparent 0 18%, color-mix(in srgb, var(--canada-blush) 46%, transparent) 18% 100%); }
+.canada-platform-grid {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 72px;
+  align-items: end;
+}
+.canada-platform h2 {
+  margin: 10px 0 0;
+  font-size: clamp(3.2rem, 5.7vw, 6rem);
+  line-height: .9;
+  letter-spacing: -.04em;
+}
+.canada-platform h2 em { color: var(--canada-red); }
+.canada-platform-copy > p { margin: 0 0 24px; color: var(--brown); line-height: 1.55; }
+.canada-system-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.canada-system-list span,
+.canada-pulse-tags span {
+  padding: 7px 9px;
+  border: 1px solid color-mix(in srgb, var(--canada-red) 42%, transparent);
+  font-size: .58rem;
+  letter-spacing: .11em;
+}
+
+.canada-pulse {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 70px;
+  align-items: center;
+}
+.canada-pulse-mark {
+  min-height: 300px;
+  position: relative;
+  background: var(--canada-ink);
+  overflow: hidden;
+}
+.canada-pulse-mark span {
+  position: absolute;
+  height: 4px;
+  background: var(--canada-red-soft);
+  transform-origin: left center;
+}
+.canada-pulse-mark span:nth-child(1) { width: 36%; left: 4%; top: 58%; transform: rotate(-8deg); }
+.canada-pulse-mark span:nth-child(2) { width: 24%; left: 35%; top: 48%; transform: rotate(26deg); }
+.canada-pulse-mark span:nth-child(3) { width: 26%; left: 54%; top: 57%; transform: rotate(-31deg); }
+.canada-pulse-mark span:nth-child(4) { width: 22%; left: 72%; top: 43%; transform: rotate(18deg); }
+.canada-pulse-mark span:nth-child(5) { width: 18%; right: -2%; top: 49%; transform: rotate(-7deg); }
+.canada-pulse h2 { margin: 10px 0 12px; font-size: clamp(3rem, 5vw, 5.4rem); line-height: .92; }
+.canada-pulse-copy > p:not(.canada-section-label) { color: var(--brown); line-height: 1.55; }
+.canada-pulse-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+
+.canada-activation-list { margin-top: 24px; }
+.canada-activation {
+  display: grid;
+  grid-template-columns: 64px 1.05fr .95fr;
+  gap: 30px;
+  padding: 34px 0 38px;
+  border-top: 1px solid var(--line);
+}
+.canada-activation-num {
+  width: 52px;
+  height: 52px;
+  background: var(--canada-red);
+  color: var(--cream);
+  display: grid;
+  place-items: center;
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.45rem;
+}
+.canada-activation h2 {
+  margin: 6px 0 8px;
+  font-size: clamp(2.9rem, 5vw, 5.2rem);
+  line-height: .9;
+  letter-spacing: -.04em;
+}
+.canada-activation-statement {
+  margin: 0 0 14px;
+  color: var(--canada-red);
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.35rem;
+  line-height: 1.08;
+}
+.canada-activation-copy { margin: 0; color: var(--brown); line-height: 1.55; max-width: 650px; }
+.canada-activation-details { border-left: 1px solid var(--line); padding-left: 24px; }
+.canada-activation-details > div { padding: 0 0 14px; margin-bottom: 14px; border-bottom: 1px solid var(--line); }
+.canada-activation-details > div:last-child { border-bottom: 0; }
+.canada-activation-details span { font-size: .58rem; letter-spacing: .14em; color: var(--canada-red); }
+.canada-activation-details p { margin: 6px 0 0; color: var(--brown); line-height: 1.45; }
+
+.canada-channel-grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+}
+.canada-channel-grid > div { padding: 24px 22px 26px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.canada-channel-grid > div:nth-child(3n) { border-right: 0; }
+.canada-channel-grid span { color: var(--canada-red); }
+
+.canada-kpi-grid {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.canada-kpi-grid article { padding: 24px 18px 28px; border-left: 1px solid var(--line); }
+.canada-kpi-grid article:first-child { border-left: 0; }
+
+.canada-process-grid {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  background: color-mix(in srgb, var(--canada-blush) 40%, transparent);
+}
+.canada-process-grid > div { padding: 24px; border-left: 1px solid var(--line); }
+.canada-process-grid > div:first-child { border-left: 0; }
+
+.canada-close {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 54px;
+  align-items: end;
+}
+.canada-close h2 {
+  margin: 18px 0 0;
+  max-width: 880px;
+  font-size: clamp(3rem, 5.5vw, 5.8rem);
+  line-height: .91;
+  letter-spacing: -.04em;
+}
+.canada-close-actions { display: grid; gap: 14px; justify-items: start; }
+
+@media (max-width: 780px) {
+  .canada-hero { padding: 30px 0 40px; }
+  .canada-meta-top { grid-template-columns: 1fr 1fr; gap: 8px 16px; font-size: .54rem; }
+  .canada-hero-grid { grid-template-columns: 1fr; gap: 24px; padding-top: 30px; }
+  .canada-hero h1 { font-size: clamp(3.7rem, 16.8vw, 5rem); line-height: .87; }
+  .canada-hero-side { padding: 20px; }
+  .canada-proposition { font-size: 1.65rem; }
+  .canada-disclaimer { margin: 22px 0 0; }
+
+  .canada-context,
+  .canada-diagnosis,
+  .canada-audience,
+  .canada-platform,
+  .canada-pulse,
+  .canada-activations,
+  .canada-ecosystem,
+  .canada-measurement,
+  .canada-process,
+  .canada-close { padding: 30px 0 36px; }
+
+  .canada-context-grid,
+  .canada-audience-heading,
+  .canada-platform-grid,
+  .canada-pulse,
+  .canada-ecosystem-heading,
+  .canada-measurement-heading,
+  .canada-process-intro,
+  .canada-close { grid-template-columns: 1fr; gap: 22px; }
+  .canada-context h2,
+  .canada-audience h2,
+  .canada-platform h2,
+  .canada-ecosystem h2,
+  .canada-measurement h2,
+  .canada-process h2,
+  .canada-close h2 { font-size: clamp(2.55rem, 12vw, 3.7rem); }
+
+  .canada-diagnosis-grid { grid-template-columns: 1fr; }
+  .diagnosis-left,
+  .diagnosis-right { padding: 22px; }
+  .canada-equation { grid-template-columns: 1fr; gap: 5px; text-align: center; }
+  .canada-equation strong { transform: rotate(90deg); margin: 3px 0; }
+
+  .canada-audience-grid { grid-template-columns: 1fr; }
+  .canada-audience-grid article { border-left: 0; border-top: 1px solid var(--line); padding: 20px 2px 22px; }
+  .canada-audience-grid article:first-child { border-top: 0; }
+
+  .canada-platform { background: color-mix(in srgb, var(--canada-blush) 38%, var(--cream)); }
+  .canada-pulse-mark { min-height: 190px; }
+
+  .canada-activation { grid-template-columns: 46px 1fr; gap: 12px; }
+  .canada-activation-num { width: 40px; height: 40px; font-size: 1.1rem; }
+  .canada-activation h2 { font-size: clamp(2.6rem, 12vw, 3.8rem); }
+  .canada-activation-details { grid-column: 2; border-left: 0; padding-left: 0; margin-top: 8px; }
+
+  .canada-channel-grid { grid-template-columns: 1fr 1fr; }
+  .canada-channel-grid > div,
+  .canada-channel-grid > div:nth-child(3n) { border-right: 1px solid var(--line); }
+  .canada-channel-grid > div:nth-child(2n) { border-right: 0; }
+
+  .canada-kpi-grid,
+  .canada-process-grid { grid-template-columns: 1fr; }
+  .canada-kpi-grid article,
+  .canada-process-grid > div { border-left: 0; border-top: 1px solid var(--line); padding: 19px 2px 21px; }
+  .canada-kpi-grid article:first-child,
+  .canada-process-grid > div:first-child { border-top: 0; }
+  .canada-process-grid { background: transparent; }
+
+  .canada-close-actions { margin-top: 6px; }
+}
