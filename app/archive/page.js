@@ -17,7 +17,7 @@ const projects = [
   {
     id: 'canada-soccer',
     code: 'ML-002',
-    date: '2026',
+    date: '19 MAY 2026',
     type: 'CASE',
     category: 'CAMPAIGN / FOOTBALL',
     title: 'Our Game Now: The Host Nation Experience',
@@ -30,7 +30,7 @@ const projects = [
   {
     id: 'swarovski-figure-skating',
     code: 'ML-003',
-    date: '2026',
+    date: 'MAR 2026',
     type: 'CASE',
     category: 'BRAND EXPERIENCE / FIGURE SKATING',
     title: 'From Performance to Experience',
@@ -38,6 +38,7 @@ const projects = [
     client: 'Swarovski × World Junior Figure Skating Championships',
     description: 'A fan experience concept exploring how the moments between performances can help new audiences understand, feel and remember the event.',
     weight: 'case',
+    href: '/archive/swarovski-figure-skating',
   },
   {
     id: '300-vip',
