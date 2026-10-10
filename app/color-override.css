@@ -29,3 +29,69 @@ body,
 .profile-language-grid h3 {
   color: #11143b;
 }
+
+.student-status {
+  color: color-mix(in srgb, var(--brown) 76%, transparent);
+}
+
+/* Decorative colour should frame content, not compete with it. */
+.interests {
+  background: linear-gradient(90deg, transparent 0 31.5%, color-mix(in srgb, var(--sage) 52%, var(--cream)) 31.5% 100%);
+}
+.quick::after { opacity: .2; }
+
+/* Keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+
+@media (max-width: 780px) {
+  /* Safari can treat fixed descendants of a backdrop-filtered sticky header as if
+     they belonged to the header. Remove that containing context while menu is open. */
+  .site-header:has(.mobile-nav[open]) {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: transparent;
+    border-bottom-color: transparent;
+  }
+
+  .mobile-nav[open] > summary {
+    position: fixed;
+    top: 21px;
+    right: 22px;
+    z-index: 110;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    font-size: 0;
+    color: var(--cream);
+  }
+  .mobile-nav[open] > summary::before {
+    content: '×';
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.8rem;
+    line-height: 1;
+  }
+
+  .mobile-menu-panel {
+    width: 100vw;
+    height: 100dvh;
+    min-height: 100vh;
+    background: #47322a;
+    opacity: 1;
+    isolation: isolate;
+  }
+  .mobile-menu-close { visibility: hidden; }
+
+  .interests { background: color-mix(in srgb, var(--sage) 38%, var(--cream)); }
+  .quick::after { opacity: .12; right: -14px; }
+
+  /* Decorative blocks bleed beyond the text column so the copy keeps one clean axis. */
+  .profile-hero::before { left: -14px; opacity: .34; }
+}
