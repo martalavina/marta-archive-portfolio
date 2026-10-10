@@ -8,6 +8,12 @@ function Arrow() {
   return <span className="ui-arrow ui-arrow-up-right" aria-hidden="true" />;
 }
 
+function entryLabel(project) {
+  if (project.type === 'NOTE') return 'READ NOTE';
+  if (project.type === 'STUDY') return 'READ STUDY';
+  return 'READ FULL CASE';
+}
+
 export default function ArchiveProjects({ projects }) {
   const [activeFilter, setActiveFilter] = useState('ALL');
 
@@ -53,7 +59,7 @@ export default function ArchiveProjects({ projects }) {
                 <p className="archive-project-client">{project.client}</p>
                 <p className="archive-project-title">{project.title}</p>
                 <p className="archive-project-description">{project.description}</p>
-                <a className="archive-project-link" href={project.href}>READ FULL CASE <Arrow /></a>
+                <a className="archive-project-link" href={project.href}>{entryLabel(project)} <Arrow /></a>
               </div>
               {project.weight === 'feature' && (
                 <div className="archive-feature-mark" aria-hidden="true">
