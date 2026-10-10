@@ -37,7 +37,7 @@ export default function Home() {
         <a className="wordmark" href="#top">MARTA LAVIÑA</a>
         <nav aria-label="Primary navigation">
           <a href="/archive">ARCHIVE</a>
-          <a href="#profile">PROFILE</a>
+          <a href="/profile">PROFILE</a>
           <a href="#contact">CONTACT</a>
           <span className="nav-disabled" aria-label="CV download will be enabled when the final PDF is added">CV</span>
         </nav>
@@ -87,7 +87,7 @@ export default function Home() {
         <h2>Looking for<br />something specific?</h2>
         <div className="quick-links">
           <a href="/archive"><span>01 / Explore the archive</span><Arrow /></a>
-          <a href="#profile"><span>02 / My profile</span><Arrow /></a>
+          <a href="/profile"><span>02 / My profile</span><Arrow /></a>
           <span className="quick-disabled"><span>03 / Download my CV</span><span>PDF TO BE ADDED</span></span>
           <a href="#contact"><span>04 / Get in touch</span><Arrow /></a>
         </div>
@@ -110,6 +110,7 @@ export default function Home() {
         <div>
           <h2>Sport first. Business second.<br />Now I think about both.</h2>
           <p>Before studying the business of sport, I experienced it from the inside. That perspective still shapes how I think about fans, athletes, brands and events.</p>
+          <a className="text-link" href="/profile">READ MY PROFILE <Arrow direction="up-right" /></a>
         </div>
       </section>
 
