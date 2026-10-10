@@ -1,19 +1,21 @@
 const recentEntries = [
   {
-    code: 'ML—001',
+    code: 'ML-001',
     date: 'OCT 2026',
     category: 'SPONSORSHIP / FAN EXPERIENCE',
     title: 'What if endurance was about the fans too?',
     client: 'IKEA × 24H Le Mans',
     description: 'A fan experience concept built around the human side of a 24-hour race.',
+    href: '/archive#ikea-le-mans',
   },
   {
-    code: 'ML—002',
+    code: 'ML-002',
     date: 'JAN 2026',
     category: 'CAMPAIGN / FOOTBALL',
     title: 'A host nation should feel like one.',
-    client: 'Canada Soccer — Our Game Now',
+    client: 'Canada Soccer / Our Game Now',
     description: 'Turning an existing campaign into a physical, digital and participatory host-nation experience.',
+    href: '/archive#canada-soccer',
   },
 ];
 
@@ -37,7 +39,7 @@ export default function Home() {
           <a href="/archive">ARCHIVE</a>
           <a href="#profile">PROFILE</a>
           <a href="#contact">CONTACT</a>
-          <a href="/Marta-Lavina-CV.pdf" download>CV <Arrow direction="down" /></a>
+          <span className="nav-disabled" aria-label="CV download will be enabled when the final PDF is added">CV</span>
         </nav>
       </header>
 
@@ -55,11 +57,11 @@ export default function Home() {
             src="https://images.unsplash.com/photo-1693825948507-acd866203fae?auto=format&fit=crop&fm=jpg&q=82&w=1800"
             alt="Spectator seated in a sports stadium"
           />
-          <figcaption>Temporary visual reference · final image will be Marta’s own.</figcaption>
+          <figcaption>Temporary visual reference. Final image will be Marta’s own.</figcaption>
         </figure>
       </section>
 
-      <section id="archive" className="archive shell section-rule">
+      <section id="latest" className="archive shell section-rule">
         <div className="section-heading">
           <h2>Latest from<br />the Archive</h2>
           <p>TWO RECENT EXPLORATIONS INTO SPORTS, BRANDS AND PEOPLE.</p>
@@ -74,7 +76,7 @@ export default function Home() {
                 <h3>{entry.title}</h3>
                 <p className="client">{entry.client}</p>
                 <p className="description">{entry.description}</p>
-                <a className="text-link" href="/archive">READ ENTRY <Arrow direction="up-right" /></a>
+                <a className="text-link" href={entry.href}>READ ENTRY <Arrow direction="up-right" /></a>
               </div>
             </article>
           ))}
@@ -84,10 +86,10 @@ export default function Home() {
       <section className="quick shell section-rule">
         <h2>Looking for<br />something specific?</h2>
         <div className="quick-links">
-          <a href="/archive"><span>01 — Explore the archive</span><Arrow /></a>
-          <a href="#profile"><span>02 — My profile</span><Arrow /></a>
-          <a href="/Marta-Lavina-CV.pdf" download><span>03 — Download my CV</span><Arrow direction="down" /></a>
-          <a href="#contact"><span>04 — Get in touch</span><Arrow /></a>
+          <a href="/archive"><span>01 / Explore the archive</span><Arrow /></a>
+          <a href="#profile"><span>02 / My profile</span><Arrow /></a>
+          <span className="quick-disabled"><span>03 / Download my CV</span><span>PDF TO BE ADDED</span></span>
+          <a href="#contact"><span>04 / Get in touch</span><Arrow /></a>
         </div>
       </section>
 
@@ -108,14 +110,13 @@ export default function Home() {
         <div>
           <h2>Sport first. Business second.<br />Now I think about both.</h2>
           <p>Before studying the business of sport, I experienced it from the inside. That perspective still shapes how I think about fans, athletes, brands and events.</p>
-          <a className="text-link" href="#">READ MY PROFILE <Arrow direction="up-right" /></a>
         </div>
       </section>
 
       <section className="cv-cta shell section-rule">
         <p className="eyebrow">PREFER THE TRADITIONAL VERSION?</p>
-        <a href="/Marta-Lavina-CV.pdf" download>DOWNLOAD MY CV <Arrow direction="down" /></a>
-        <p>PDF · ENGLISH · UPDATED OCT 2026</p>
+        <span className="cv-placeholder">CV PDF COMING NEXT</span>
+        <p>THE DOWNLOAD WILL BE ENABLED WHEN THE FINAL CV IS ADDED.</p>
       </section>
 
       <footer id="contact" className="footer shell section-rule">
@@ -123,13 +124,13 @@ export default function Home() {
           <strong>MARTA LAVIÑA</strong>
           <p>Sports, brands & experiences.</p>
         </div>
-        <div className="footer-links">
-          <a href="mailto:hello@example.com">Email</a>
-          <a href="#">LinkedIn</a>
+        <div className="footer-links footer-links-pending">
+          <span>Email</span>
+          <span>LinkedIn</span>
         </div>
         <div className="legal">
           <p>© Marta Laviña 2026</p>
-          <p><a href="#">Legal</a> · <a href="#">Privacy</a></p>
+          <p><span>Legal</span> · <span>Privacy</span></p>
         </div>
       </footer>
     </main>
