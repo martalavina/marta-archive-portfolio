@@ -10,12 +10,12 @@ const recentEntries = [
   },
   {
     code: 'ML-002',
-    date: 'JAN 2026',
+    date: '2026',
     category: 'CAMPAIGN / FOOTBALL',
     title: 'A host nation should feel like one.',
     client: 'Canada Soccer / Our Game Now',
     description: 'Turning an existing campaign into a physical, digital and participatory host-nation experience.',
-    href: '/archive#canada-soccer',
+    href: '/archive/canada-soccer',
   },
 ];
 
