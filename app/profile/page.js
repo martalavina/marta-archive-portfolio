@@ -49,6 +49,24 @@ const capabilities = [
   'Media Analysis',
 ];
 
+function MobileMenu() {
+  return (
+    <details className="mobile-nav">
+      <summary>MENU</summary>
+      <div className="mobile-menu-panel">
+        <div className="mobile-menu-top"><span>MARTA LAVIÑA</span><span className="mobile-menu-close">×</span></div>
+        <div className="mobile-menu-links">
+          <a href="/archive"><span>ARCHIVE</span><small>01</small></a>
+          <a href="/profile"><span>PROFILE</span><small>02</small></a>
+          <a href="/#contact"><span>CONTACT</span><small>03</small></a>
+          <span className="mobile-menu-disabled"><span>CV</span><small>04</small></span>
+        </div>
+        <div className="mobile-menu-foot"><span>SPORTS / BRANDS / PEOPLE / EXPERIENCES</span></div>
+      </div>
+    </details>
+  );
+}
+
 export const metadata = {
   title: 'Profile | Marta Laviña',
   description: 'Profile, experience and perspective of Marta Laviña across sports business, events, sponsorship and brand experience.',
@@ -59,12 +77,13 @@ export default function ProfilePage() {
     <main>
       <header className="site-header shell">
         <a className="wordmark" href="/">MARTA LAVIÑA</a>
-        <nav aria-label="Primary navigation">
+        <nav className="desktop-nav" aria-label="Primary navigation">
           <a href="/archive">ARCHIVE</a>
           <a className="nav-active" href="/profile">PROFILE</a>
           <a href="/#contact">CONTACT</a>
           <span className="nav-disabled">CV</span>
         </nav>
+        <MobileMenu />
       </header>
 
       <section className="profile-hero shell reveal">
@@ -174,18 +193,9 @@ export default function ProfilePage() {
       </section>
 
       <footer className="footer shell section-rule">
-        <div>
-          <strong>MARTA LAVIÑA</strong>
-          <p>Sports, brands & experiences.</p>
-        </div>
-        <div className="footer-links footer-links-pending">
-          <span>Email</span>
-          <span>LinkedIn</span>
-        </div>
-        <div className="legal">
-          <p>© Marta Laviña 2026</p>
-          <p><span>Legal</span> · <span>Privacy</span></p>
-        </div>
+        <div><strong>MARTA LAVIÑA</strong><p>Sports, brands & experiences.</p></div>
+        <div className="footer-links footer-links-pending"><span>Email</span><span>LinkedIn</span></div>
+        <div className="legal"><p>© Marta Laviña 2026</p><p><span>Legal</span> · <span>Privacy</span></p></div>
       </footer>
     </main>
   );
