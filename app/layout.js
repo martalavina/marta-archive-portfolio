@@ -1,7 +1,7 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Marta Laviña — Sports, Brands & Experiences',
+  title: 'Marta Laviña | Sports, Brands & Experiences',
   description: 'An editorial archive of sports, brands & experiences by Marta Laviña.',
 };
 
