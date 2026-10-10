@@ -93,7 +93,7 @@ export default function ProfilePage() {
         </div>
         <h1>I grew up inside sport.<br />Now I think about what happens <em>around it.</em></h1>
         <div className="profile-hero-copy">
-          <p>I am a Sports Management student building my career around sponsorship activation, brand experience, events and partnerships.</p>
+          <p>I am currently completing my final year in Sports Management while building my career around sponsorship activation, brand experience, events and partnerships.</p>
           <p>My perspective comes from experiencing sport from several sides: athlete, coach, commentator, event staff, analyst and fan.</p>
         </div>
       </section>
