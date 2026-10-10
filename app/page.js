@@ -42,7 +42,7 @@ function MobileMenu() {
         <div className="mobile-menu-links">
           <a href="/archive"><span>ARCHIVE</span><small>01</small></a>
           <a href="/profile"><span>PROFILE</span><small>02</small></a>
-          <a href="#contact"><span>CONTACT</span><small>03</small></a>
+          <a href="/contact"><span>CONTACT</span><small>03</small></a>
           <span className="mobile-menu-disabled"><span>CV</span><small>04</small></span>
         </div>
         <div className="mobile-menu-foot"><span>SPORTS / BRANDS / PEOPLE / EXPERIENCES</span></div>
@@ -59,7 +59,7 @@ export default function Home() {
         <nav className="desktop-nav" aria-label="Primary navigation">
           <a href="/archive">ARCHIVE</a>
           <a href="/profile">PROFILE</a>
-          <a href="#contact">CONTACT</a>
+          <a href="/contact">CONTACT</a>
           <span className="nav-disabled" aria-label="CV download will be enabled when the final PDF is added">CV</span>
         </nav>
         <MobileMenu />
@@ -116,7 +116,7 @@ export default function Home() {
           <a href="/archive"><span>01 / Explore the archive</span><Arrow /></a>
           <a href="/profile"><span>02 / My profile</span><Arrow /></a>
           <span className="quick-disabled"><span>03 / Download my CV</span><span>PDF TO BE ADDED</span></span>
-          <a href="#contact"><span>04 / Get in touch</span><Arrow /></a>
+          <a href="/contact"><span>04 / Get in touch</span><Arrow /></a>
         </div>
       </section>
 
@@ -147,14 +147,14 @@ export default function Home() {
         <p>THE DOWNLOAD WILL BE ENABLED WHEN THE FINAL CV IS ADDED.</p>
       </section>
 
-      <footer id="contact" className="footer shell section-rule">
+      <footer className="footer shell section-rule">
         <div>
           <strong>MARTA LAVIÑA</strong>
           <p>Sports, brands & experiences.</p>
         </div>
-        <div className="footer-links footer-links-pending">
-          <span>Email</span>
-          <span>LinkedIn</span>
+        <div className="footer-links">
+          <a href="mailto:mlavinaperez@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/martalavinaperez" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
         <div className="legal">
           <p>© Marta Laviña 2026</p>
