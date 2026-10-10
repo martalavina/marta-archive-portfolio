@@ -1,0 +1,4 @@
+/* Small release-only cleanup for elements that are not ready to be functional yet. */
+
+/* Do not present Legal / Privacy as destinations until real pages exist. */
+.legal p:last-child { display: none; }
