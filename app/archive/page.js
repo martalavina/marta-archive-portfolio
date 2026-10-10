@@ -1,0 +1,166 @@
+const projects = [
+  {
+    code: 'ML—001',
+    date: 'OCT 2026',
+    type: 'FEATURE',
+    category: 'SPONSORSHIP / FAN EXPERIENCE',
+    title: 'The Human Side of Endurance',
+    headline: 'What if endurance was about the fans too?',
+    client: 'IKEA × 24H Le Mans',
+    description: 'A sponsorship activation built around the human side of a 24-hour race — rest, food, comfort and participation as part of the fan experience.',
+    weight: 'feature',
+  },
+  {
+    code: 'ML—002',
+    date: 'JAN 2026',
+    type: 'CASE',
+    category: 'CAMPAIGN / FOOTBALL',
+    title: 'Our Game Now: The Host Nation Experience',
+    headline: 'A host nation should feel like one.',
+    client: 'Canada Soccer',
+    description: 'A strategic extension of an existing campaign into a physical, digital and participatory host-nation experience.',
+    weight: 'case',
+  },
+  {
+    code: 'ML—003',
+    date: 'SEP 2026',
+    type: 'CASE',
+    category: 'EVENT OPERATIONS / GUEST EXPERIENCE',
+    title: '300 VIP in 20 Minutes',
+    headline: 'When the experience starts before the event does.',
+    client: 'Event Operations Case',
+    description: 'An operational response to a VIP arrival bottleneck: flow, check-in, staffing and service recovery under time pressure.',
+    weight: 'case',
+  },
+  {
+    code: 'ML—004',
+    date: '2026',
+    type: 'CASE',
+    category: 'BRAND EXPERIENCE / FIGURE SKATING',
+    title: 'From Performance to Experience',
+    headline: 'What happens while the ice is empty?',
+    client: 'Swarovski × World Junior Figure Skating Championships',
+    description: 'A fan-experience concept exploring how the moments between performances can help new audiences understand, feel and remember the event.',
+    weight: 'case',
+  },
+  {
+    code: 'ML—005',
+    date: '2026',
+    type: 'STUDY',
+    category: 'PARTNERSHIP STRATEGY / FOOTBALL',
+    title: 'Afouteza Polo Planeta',
+    headline: 'Can a partnership connect football identity with the place it comes from?',
+    client: 'Celta de Vigo × ECOALF',
+    description: 'A purpose-led partnership study connecting Galician football culture, the Atlantic and environmental responsibility.',
+    weight: 'study',
+  },
+  {
+    code: 'ML—006',
+    date: '2026',
+    type: 'NOTE',
+    category: 'RESEARCH / MOTORSPORT',
+    title: 'Who Controls Formula 1?',
+    headline: 'Sport, regulation and commercial power.',
+    client: 'Formula 1 Governance Study',
+    description: 'A concise look at the relationship between the FIA, commercial rights and teams — and where decision-making power actually sits.',
+    weight: 'note',
+  },
+];
+
+function Arrow() {
+  return <span className="ui-arrow ui-arrow-up-right" aria-hidden="true" />;
+}
+
+export const metadata = {
+  title: 'Archive — Marta Laviña',
+  description: 'Selected projects, concepts and thinking across sports, brands and experiences by Marta Laviña.',
+};
+
+export default function ArchivePage() {
+  return (
+    <main>
+      <header className="site-header shell">
+        <a className="wordmark" href="/">MARTA LAVIÑA</a>
+        <nav aria-label="Primary navigation">
+          <a className="nav-active" href="/archive">ARCHIVE</a>
+          <a href="/#profile">PROFILE</a>
+          <a href="/#contact">CONTACT</a>
+          <a href="/Marta-Lavina-CV.pdf" download>CV <span className="ui-arrow ui-arrow-down" aria-hidden="true" /></a>
+        </nav>
+      </header>
+
+      <section className="archive-hero shell reveal">
+        <div className="archive-kicker">
+          <span>ARCHIVE</span>
+          <span>SELECTED WORK / 2026</span>
+        </div>
+        <h1>Ideas, strategies<br />and things worth<br /><em>keeping.</em></h1>
+        <div className="archive-intro">
+          <p>A growing collection of projects across sponsorship, brand experience, events, fan experience and sports communication.</p>
+          <p>Not every entry has the same weight. Some are full case studies. Others are ideas, studies or pieces of thinking that were worth filing.</p>
+        </div>
+      </section>
+
+      <section className="archive-lenses shell section-rule">
+        <p className="eyebrow">BROWSE THE ARCHIVE</p>
+        <div className="archive-lens-list" aria-label="Archive themes">
+          <span>SPONSORSHIP</span>
+          <span>FAN EXPERIENCE</span>
+          <span>EVENTS</span>
+          <span>BRAND</span>
+          <span>CAMPAIGNS</span>
+          <span>RESEARCH</span>
+        </div>
+      </section>
+
+      <section className="archive-index shell section-rule">
+        <div className="archive-index-heading">
+          <span>INDEX</span>
+          <span>{String(projects.length).padStart(2, '0')} ENTRIES</span>
+        </div>
+
+        {projects.map((project, index) => (
+          <article className={`archive-project archive-project-${project.weight}`} key={project.code}>
+            <div className="archive-project-num">{String(index + 1).padStart(2, '0')}</div>
+            <div className="archive-project-main">
+              <p className="entry-meta">{project.code} · {project.date} · {project.type}</p>
+              <p className="archive-project-category">{project.category}</p>
+              <h2>{project.headline}</h2>
+              <p className="archive-project-client">{project.client}</p>
+              <p className="archive-project-title">{project.title}</p>
+              <p className="archive-project-description">{project.description}</p>
+              <span className="archive-project-link">OPEN ENTRY <Arrow /></span>
+            </div>
+            {project.weight === 'feature' && (
+              <div className="archive-feature-mark" aria-hidden="true">
+                <span>FEATURED</span>
+                <span>ML—001</span>
+              </div>
+            )}
+          </article>
+        ))}
+      </section>
+
+      <section className="archive-note shell section-rule">
+        <p className="eyebrow">ABOUT THE ARCHIVE</p>
+        <p>The archive is intentionally uneven. A finished activation can sit next to a two-minute research note because the value is not always in the scale of the output — sometimes it is in the question behind it.</p>
+        <a className="text-link" href="/">BACK TO HOME <span className="ui-arrow ui-arrow-right" aria-hidden="true" /></a>
+      </section>
+
+      <footer className="footer shell section-rule">
+        <div>
+          <strong>MARTA LAVIÑA</strong>
+          <p>Sports, brands & experiences.</p>
+        </div>
+        <div className="footer-links">
+          <a href="mailto:hello@example.com">Email</a>
+          <a href="#">LinkedIn</a>
+        </div>
+        <div className="legal">
+          <p>© Marta Laviña 2026</p>
+          <p><a href="#">Legal</a> · <a href="#">Privacy</a></p>
+        </div>
+      </footer>
+    </main>
+  );
+}
