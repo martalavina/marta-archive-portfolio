@@ -24,6 +24,10 @@ const interests = [
   'Why sport deserves better storytelling.',
 ];
 
+function Arrow({ direction = 'right' }) {
+  return <span className={`ui-arrow ui-arrow-${direction}`} aria-hidden="true" />;
+}
+
 export default function Home() {
   return (
     <main>
@@ -33,7 +37,7 @@ export default function Home() {
           <a href="#archive">ARCHIVE</a>
           <a href="#profile">PROFILE</a>
           <a href="#contact">CONTACT</a>
-          <a href="/Marta-Lavina-CV.pdf" download>CV ↓</a>
+          <a href="/Marta-Lavina-CV.pdf" download>CV <Arrow direction="down" /></a>
         </nav>
       </header>
 
@@ -70,7 +74,7 @@ export default function Home() {
                 <h3>{entry.title}</h3>
                 <p className="client">{entry.client}</p>
                 <p className="description">{entry.description}</p>
-                <a className="text-link" href="#">READ ENTRY ↗</a>
+                <a className="text-link" href="#">READ ENTRY <Arrow direction="up-right" /></a>
               </div>
             </article>
           ))}
@@ -80,10 +84,10 @@ export default function Home() {
       <section className="quick shell section-rule">
         <h2>Looking for<br />something specific?</h2>
         <div className="quick-links">
-          <a href="#archive"><span>01 — Explore the archive</span><span>→</span></a>
-          <a href="#profile"><span>02 — My profile</span><span>→</span></a>
-          <a href="/Marta-Lavina-CV.pdf" download><span>03 — Download my CV</span><span>↓</span></a>
-          <a href="#contact"><span>04 — Get in touch</span><span>→</span></a>
+          <a href="#archive"><span>01 — Explore the archive</span><Arrow /></a>
+          <a href="#profile"><span>02 — My profile</span><Arrow /></a>
+          <a href="/Marta-Lavina-CV.pdf" download><span>03 — Download my CV</span><Arrow direction="down" /></a>
+          <a href="#contact"><span>04 — Get in touch</span><Arrow /></a>
         </div>
       </section>
 
@@ -104,13 +108,13 @@ export default function Home() {
         <div>
           <h2>Sport first. Business second.<br />Now I think about both.</h2>
           <p>Before studying the business of sport, I experienced it from the inside. That perspective still shapes how I think about fans, athletes, brands and events.</p>
-          <a className="text-link" href="#">READ MY PROFILE ↗</a>
+          <a className="text-link" href="#">READ MY PROFILE <Arrow direction="up-right" /></a>
         </div>
       </section>
 
       <section className="cv-cta shell section-rule">
         <p className="eyebrow">PREFER THE TRADITIONAL VERSION?</p>
-        <a href="/Marta-Lavina-CV.pdf" download>DOWNLOAD MY CV ↓</a>
+        <a href="/Marta-Lavina-CV.pdf" download>DOWNLOAD MY CV <Arrow direction="down" /></a>
         <p>PDF · ENGLISH · UPDATED OCT 2026</p>
       </section>
 
