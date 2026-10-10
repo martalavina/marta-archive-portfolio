@@ -88,7 +88,7 @@ function MobileMenu() {
         <div className="mobile-menu-links">
           <a href="/archive"><span>ARCHIVE</span><small>01</small></a>
           <a href="/profile"><span>PROFILE</span><small>02</small></a>
-          <a href="/#contact"><span>CONTACT</span><small>03</small></a>
+          <a href="/contact"><span>CONTACT</span><small>03</small></a>
           <span className="mobile-menu-disabled"><span>CV</span><small>04</small></span>
         </div>
         <div className="mobile-menu-foot"><span>SPORTS / BRANDS / PEOPLE / EXPERIENCES</span></div>
@@ -110,7 +110,7 @@ export default function ArchivePage() {
         <nav className="desktop-nav" aria-label="Primary navigation">
           <a className="nav-active" href="/archive">ARCHIVE</a>
           <a href="/profile">PROFILE</a>
-          <a href="/#contact">CONTACT</a>
+          <a href="/contact">CONTACT</a>
           <span className="nav-disabled" aria-label="CV download will be enabled when the final PDF is added">CV</span>
         </nav>
         <MobileMenu />
@@ -177,7 +177,7 @@ export default function ArchivePage() {
 
       <footer className="footer shell section-rule">
         <div><strong>MARTA LAVIÑA</strong><p>Sports, brands & experiences.</p></div>
-        <div className="footer-links footer-links-pending"><span>Email</span><span>LinkedIn</span></div>
+        <div className="footer-links"><a href="mailto:mlavinaperez@gmail.com">Email</a><a href="https://www.linkedin.com/in/martalavinaperez" target="_blank" rel="noreferrer">LinkedIn</a></div>
         <div className="legal"><p>© Marta Laviña 2026</p><p><span>Legal</span> · <span>Privacy</span></p></div>
       </footer>
     </main>
