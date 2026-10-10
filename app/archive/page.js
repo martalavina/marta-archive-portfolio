@@ -75,8 +75,9 @@ const projects = [
     title: 'Who Controls Formula 1?',
     headline: 'Sport, regulation and commercial power.',
     client: 'Formula 1 Governance Study',
-    description: 'A concise look at the relationship between the FIA, commercial rights and teams, including where decision-making power actually sits.',
+    description: 'A concise look at the relationship between the FIA, Formula 1 and the teams, including how power shifts depending on the decision being made.',
     weight: 'note',
+    href: '/archive/formula-1-governance',
   },
 ];
 
