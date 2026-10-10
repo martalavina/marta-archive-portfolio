@@ -10,7 +10,7 @@ const recentEntries = [
   },
   {
     code: 'ML-002',
-    date: '2026',
+    date: '19 MAY 2026',
     category: 'CAMPAIGN / FOOTBALL',
     title: 'A host nation should feel like one.',
     client: 'Canada Soccer / Our Game Now',
