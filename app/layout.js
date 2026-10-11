@@ -3,6 +3,8 @@ import './color-override.css';
 import './polish.css';
 import './final.css';
 import './project-bleed.css';
+import './qa.css';
+import './release.css';
 
 export const metadata = {
   title: 'Marta Laviña | Sports, Brands & Experiences',
