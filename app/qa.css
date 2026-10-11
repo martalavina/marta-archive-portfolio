@@ -1,0 +1,285 @@
+/* Final geometry QA. This file deliberately sits after all project styles. */
+
+/* --------------------------------------------------------------------------
+   Preserve the shared content axis.
+   Earlier bleed experiments used negative margins on .shell sections, which
+   could move the whole section instead of only extending its colour field.
+   Reset those sections to the normal centred shell and extend colour with
+   box-shadow instead. Text therefore stays on exactly the same x-axis.
+   -------------------------------------------------------------------------- */
+
+.interests,
+.profile-perspective,
+.profile-sport,
+.profile-looking,
+.ikea-case .case-opportunity,
+.ikea-case .case-capacity,
+.swarovski-case .skate-insight,
+.swarovski-case .skate-fit,
+.swarovski-case .skate-hero-activation,
+.swarovski-case .skate-real,
+.swarovski-case .skate-process,
+.canada-case .canada-platform {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Solid section fields extend beyond the text column without moving content. */
+.interests {
+  box-shadow:
+    -22px 0 0 color-mix(in srgb, var(--sage) 25%, var(--cream)),
+     22px 0 0 color-mix(in srgb, var(--sage) 25%, var(--cream));
+}
+.profile-perspective {
+  box-shadow:
+    -22px 0 0 color-mix(in srgb, var(--butter) 32%, var(--cream)),
+     22px 0 0 color-mix(in srgb, var(--butter) 32%, var(--cream));
+}
+.profile-sport {
+  box-shadow:
+    -22px 0 0 color-mix(in srgb, var(--sage) 30%, var(--cream)),
+     22px 0 0 color-mix(in srgb, var(--sage) 30%, var(--cream));
+}
+.profile-looking {
+  box-shadow:
+    -22px 0 0 color-mix(in srgb, var(--butter) 24%, var(--cream)),
+     22px 0 0 color-mix(in srgb, var(--butter) 24%, var(--cream));
+}
+.ikea-case .case-opportunity {
+  box-shadow:
+    -22px 0 0 color-mix(in srgb, var(--sky) 18%, var(--cream)),
+     22px 0 0 color-mix(in srgb, var(--sky) 18%, var(--cream));
+}
+.ikea-case .case-capacity {
+  box-shadow:
+    -22px 0 0 color-mix(in srgb, var(--sage) 27%, var(--cream)),
+     22px 0 0 color-mix(in srgb, var(--sage) 27%, var(--cream));
+}
+.swarovski-case .skate-fit {
+  box-shadow:
+    -22px 0 0 color-mix(in srgb, var(--skate-lilac) 28%, var(--cream)),
+     22px 0 0 color-mix(in srgb, var(--skate-lilac) 28%, var(--cream));
+}
+.swarovski-case .skate-real {
+  box-shadow:
+    -22px 0 0 color-mix(in srgb, var(--sage) 20%, var(--cream)),
+     22px 0 0 color-mix(in srgb, var(--sage) 20%, var(--cream));
+}
+.swarovski-case .skate-process {
+  box-shadow:
+    -22px 0 0 color-mix(in srgb, var(--skate-ice) 19%, var(--cream)),
+     22px 0 0 color-mix(in srgb, var(--skate-ice) 19%, var(--cream));
+}
+
+/* Gradient sections keep their content axis but do not fake a solid extension. */
+.swarovski-case .skate-insight,
+.swarovski-case .skate-hero-activation,
+.canada-case .canada-platform {
+  box-shadow: none !important;
+}
+
+/* Celta statement is an internal module rather than a shell section. Give it
+   controlled visual breathing room while keeping its text padding intact. */
+.celta-case .celta-statement {
+  margin-left: -12px !important;
+  margin-right: -12px !important;
+  padding-left: 44px !important;
+  padding-right: 44px !important;
+}
+
+/* --------------------------------------------------------------------------
+   Softer project palette. Strong red/navy moments remain strong because they
+   encode campaign or operational meaning. Pastel/supporting fields recede.
+   -------------------------------------------------------------------------- */
+
+.ikea-case .platform-item-01 { background: color-mix(in srgb, var(--sky) 50%, var(--cream)) !important; }
+.ikea-case .platform-item-02 { background: color-mix(in srgb, var(--butter) 56%, var(--cream)) !important; }
+.ikea-case .platform-item-03 { background: color-mix(in srgb, var(--sage) 48%, var(--cream)) !important; }
+.ikea-case .native-behaviours,
+.ikea-case .budget-note { background: color-mix(in srgb, var(--butter) 46%, var(--cream)) !important; }
+.ikea-case .rights-note { background: color-mix(in srgb, var(--sky) 45%, var(--cream)) !important; }
+
+.vip-case .vip-number-band,
+.vip-case .flow-arrival,
+.vip-case .vip-experience-grid > div:first-child { background: color-mix(in srgb, var(--vip-sky) 58%, var(--cream)) !important; }
+.vip-case .vip-core-problem,
+.vip-case .vip-response-grid article:nth-child(2) { background: color-mix(in srgb, var(--vip-butter) 58%, var(--cream)) !important; }
+
+.celta-case .celta-statement,
+.celta-case .celta-credibility-grid > div:first-child,
+.celta-case .celta-kpi-grid article:nth-child(1) { background: color-mix(in srgb, var(--celta-green) 54%, var(--cream)) !important; }
+.celta-case .celta-platform-grid article:nth-child(1),
+.celta-case .celta-kpi-grid article:nth-child(2) { background: color-mix(in srgb, var(--celta-blue) 54%, var(--cream)) !important; }
+.celta-case .celta-context-note,
+.celta-case .celta-platform-grid article:nth-child(2) { background: color-mix(in srgb, var(--celta-butter) 58%, var(--cream)) !important; }
+
+/* --------------------------------------------------------------------------
+   Repeated information systems: identical top rhythm at every breakpoint.
+   -------------------------------------------------------------------------- */
+
+.ikea-case .real-grid > div,
+.ikea-case .process-grid > div,
+.ikea-case .kpi-item,
+.canada-case .canada-audience-grid article,
+.canada-case .canada-kpi-grid article,
+.canada-case .canada-process-grid > div,
+.swarovski-case .skate-real-grid > div,
+.swarovski-case .skate-kpi-grid article,
+.vip-case .vip-assess-grid article,
+.vip-case .vip-metric-grid article,
+.celta-case .celta-fit-grid article,
+.celta-case .celta-platform-grid article,
+.celta-case .celta-kpi-grid article {
+  padding-top: 22px !important;
+}
+
+.ikea-case .real-grid > div > span,
+.ikea-case .process-grid > div > span,
+.ikea-case .kpi-item > span,
+.canada-case .canada-audience-grid article > span,
+.canada-case .canada-kpi-grid article > span,
+.canada-case .canada-process-grid > div > span,
+.swarovski-case .skate-real-grid > div > span,
+.swarovski-case .skate-kpi-grid article > span,
+.vip-case .vip-assess-grid article > span,
+.vip-case .vip-metric-grid article > span,
+.celta-case .celta-fit-grid article > span,
+.celta-case .celta-platform-grid article > span,
+.celta-case .celta-kpi-grid article > span {
+  margin: 0 !important;
+  line-height: 1 !important;
+}
+
+/* Home and Profile numbered lists share a predictable number/text axis too. */
+.interest,
+.profile-capability {
+  align-items: start !important;
+}
+.interest > span,
+.profile-capability > span { line-height: 1.15 !important; }
+.interest > p,
+.profile-capability > p { margin-top: 0 !important; }
+
+@media (max-width: 860px) {
+  /* Treat tablets and landscape phones like mobile for comparison grids. This
+     removes the awkward 1/3 or 1/4 mismatch caused by two-column wrapping. */
+  .ikea-case .platform-index,
+  .ikea-case .real-grid,
+  .ikea-case .process-grid,
+  .ikea-case .kpi-grid,
+  .canada-case .canada-audience-grid,
+  .canada-case .canada-channel-grid,
+  .canada-case .canada-kpi-grid,
+  .canada-case .canada-process-grid,
+  .swarovski-case .skate-platform-index,
+  .swarovski-case .skate-runshow,
+  .swarovski-case .skate-real-grid,
+  .swarovski-case .skate-kpi-grid,
+  .swarovski-case .skate-process-steps,
+  .vip-case .vip-assess-grid,
+  .vip-case .vip-metric-grid,
+  .celta-case .celta-fit-grid,
+  .celta-case .celta-platform-grid,
+  .celta-case .celta-kpi-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 720px) {
+  /* Shell width already provides the mobile gutter. Keep it centred. */
+  .interests,
+  .profile-perspective,
+  .profile-sport,
+  .profile-looking,
+  .ikea-case .case-opportunity,
+  .ikea-case .case-capacity,
+  .swarovski-case .skate-insight,
+  .swarovski-case .skate-fit,
+  .swarovski-case .skate-hero-activation,
+  .swarovski-case .skate-real,
+  .swarovski-case .skate-process,
+  .canada-case .canada-platform {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Extend solid colour into the 14px gutter while text remains aligned. */
+  .interests {
+    box-shadow:
+      -14px 0 0 color-mix(in srgb, var(--sage) 25%, var(--cream)),
+       14px 0 0 color-mix(in srgb, var(--sage) 25%, var(--cream));
+  }
+  .profile-perspective {
+    box-shadow:
+      -14px 0 0 color-mix(in srgb, var(--butter) 32%, var(--cream)),
+       14px 0 0 color-mix(in srgb, var(--butter) 32%, var(--cream));
+  }
+  .profile-sport {
+    box-shadow:
+      -14px 0 0 color-mix(in srgb, var(--sage) 30%, var(--cream)),
+       14px 0 0 color-mix(in srgb, var(--sage) 30%, var(--cream));
+  }
+  .profile-looking {
+    box-shadow:
+      -14px 0 0 color-mix(in srgb, var(--butter) 24%, var(--cream)),
+       14px 0 0 color-mix(in srgb, var(--butter) 24%, var(--cream));
+  }
+  .ikea-case .case-opportunity {
+    box-shadow:
+      -14px 0 0 color-mix(in srgb, var(--sky) 18%, var(--cream)),
+       14px 0 0 color-mix(in srgb, var(--sky) 18%, var(--cream));
+  }
+  .ikea-case .case-capacity {
+    box-shadow:
+      -14px 0 0 color-mix(in srgb, var(--sage) 27%, var(--cream)),
+       14px 0 0 color-mix(in srgb, var(--sage) 27%, var(--cream));
+  }
+  .swarovski-case .skate-fit {
+    box-shadow:
+      -14px 0 0 color-mix(in srgb, var(--skate-lilac) 28%, var(--cream)),
+       14px 0 0 color-mix(in srgb, var(--skate-lilac) 28%, var(--cream));
+  }
+  .swarovski-case .skate-real {
+    box-shadow:
+      -14px 0 0 color-mix(in srgb, var(--sage) 20%, var(--cream)),
+       14px 0 0 color-mix(in srgb, var(--sage) 20%, var(--cream));
+  }
+  .swarovski-case .skate-process {
+    box-shadow:
+      -14px 0 0 color-mix(in srgb, var(--skate-ice) 19%, var(--cream)),
+       14px 0 0 color-mix(in srgb, var(--skate-ice) 19%, var(--cream));
+  }
+
+  /* Celta internal statement gets a small bleed, not a full shell shift. */
+  .celta-case .celta-statement {
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+
+  /* Consistent start and spacing in every stacked numbered module. */
+  .ikea-case .platform-item,
+  .ikea-case .real-grid > div,
+  .ikea-case .process-grid > div,
+  .ikea-case .kpi-item,
+  .canada-case .canada-audience-grid article,
+  .canada-case .canada-channel-grid > div,
+  .canada-case .canada-kpi-grid article,
+  .canada-case .canada-process-grid > div,
+  .swarovski-case .skate-platform-item,
+  .swarovski-case .skate-runshow > div,
+  .swarovski-case .skate-real-grid > div,
+  .swarovski-case .skate-kpi-grid article,
+  .swarovski-case .skate-process-steps > div,
+  .vip-case .vip-assess-grid article,
+  .vip-case .vip-metric-grid article,
+  .celta-case .celta-fit-grid article,
+  .celta-case .celta-platform-grid article,
+  .celta-case .celta-kpi-grid article {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+}
