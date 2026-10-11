@@ -61,7 +61,7 @@ function MobileMenu() {
 }
 
 export const metadata = {
-  title: 'IKEA × 24H Le Mans | Marta Laviña',
+  title: 'IKEA × 24H Le Mans',
   description: 'The Human Side of Endurance, a speculative sponsorship activation and fan experience platform for IKEA at the 24 Hours of Le Mans.',
 };
 
@@ -225,7 +225,7 @@ export default function IkeaLeMansPage() {
           <div><span>04</span><h3>PRODUCTION</h3><p>Temporary structure, AV, power, connectivity, food equipment, staffing, security, freight, insurance and contingency.</p></div>
         </div>
         <div className="budget-note">
-          <span className="mini-label">WHY THERE IS NO FAKE TOTAL BUDGET</span>
+          <span className="mini-label">WHY THERE IS NO FIXED TOTAL BUDGET</span>
           <p>Without negotiated rights, footprint, structural specification, broadcast feed, power and operating responsibilities, a precise total would create false confidence. The project defines the cost centres and scope decisions that drive the budget instead.</p>
         </div>
       </section>
