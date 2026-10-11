@@ -44,7 +44,7 @@ export default function ContactPage() {
           <span>MADRID / NICE / OPEN TO INTERNATIONAL OPPORTUNITIES</span>
         </div>
         <h1>Let’s talk about<br />what happens <em>around the game.</em></h1>
-        <p>I am always open to conversations around sponsorship activation, brand experience, event management, fan experience and partnerships in sport.</p>
+        <p>I’m open to conversations about sponsorship activation, brand experience, event management, fan experience and partnerships in sport.</p>
       </section>
 
       <section className="contact-stage">
@@ -53,7 +53,7 @@ export default function ContactPage() {
           <div className="contact-panel-heading">
             <div>
               <p className="eyebrow">SEND A MESSAGE</p>
-              <h2>Give me enough context to know who you are and what you have in mind.</h2>
+              <h2>Tell me who you are and what you have in mind.</h2>
             </div>
             <div className="contact-direct">
               <span>DIRECT</span>
