@@ -1,0 +1,76 @@
+/* Last-mile override for project detail background fields. */
+
+/* These sections already use pseudo-elements to create real bleed, so prevent
+   any secondary shadow treatment from creating a second edge. */
+.ikea-case .case-opportunity,
+.ikea-case .case-capacity,
+.swarovski-case .skate-fit,
+.swarovski-case .skate-hero-activation,
+.swarovski-case .skate-real,
+.swarovski-case .skate-process {
+  box-shadow: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.ikea-case .case-opportunity::before,
+.ikea-case .case-capacity::before,
+.swarovski-case .skate-fit::before,
+.swarovski-case .skate-hero-activation::before,
+.swarovski-case .skate-real::before,
+.swarovski-case .skate-process::before {
+  left: -22px !important;
+  right: -22px !important;
+}
+
+.ikea-case .case-opportunity::before {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--sky) 18%, var(--cream)) 0 52%, transparent 52%) !important;
+}
+.ikea-case .case-capacity::before {
+  background: color-mix(in srgb, var(--sage) 27%, var(--cream)) !important;
+}
+.swarovski-case .skate-fit::before {
+  background: color-mix(in srgb, var(--skate-lilac) 28%, var(--cream)) !important;
+}
+.swarovski-case .skate-hero-activation::before {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--skate-ice) 25%, var(--cream)), transparent 78%) !important;
+}
+.swarovski-case .skate-real::before {
+  background: color-mix(in srgb, var(--sage) 20%, var(--cream)) !important;
+}
+.swarovski-case .skate-process::before {
+  background: color-mix(in srgb, var(--skate-ice) 19%, var(--cream)) !important;
+}
+
+@media (max-width: 780px) {
+  .ikea-case .case-opportunity::before,
+  .ikea-case .case-capacity::before,
+  .swarovski-case .skate-fit::before,
+  .swarovski-case .skate-hero-activation::before,
+  .swarovski-case .skate-real::before,
+  .swarovski-case .skate-process::before {
+    left: -14px !important;
+    right: -14px !important;
+  }
+
+  .ikea-case .case-opportunity::before {
+    background: color-mix(in srgb, var(--sky) 16%, var(--cream)) !important;
+  }
+  .ikea-case .case-capacity::before {
+    background: color-mix(in srgb, var(--sage) 23%, var(--cream)) !important;
+  }
+  .swarovski-case .skate-fit::before {
+    background: color-mix(in srgb, var(--skate-lilac) 23%, var(--cream)) !important;
+  }
+  .swarovski-case .skate-hero-activation::before {
+    background: color-mix(in srgb, var(--skate-ice) 21%, var(--cream)) !important;
+  }
+  .swarovski-case .skate-real::before {
+    background: color-mix(in srgb, var(--sage) 17%, var(--cream)) !important;
+  }
+  .swarovski-case .skate-process::before {
+    background: color-mix(in srgb, var(--skate-ice) 16%, var(--cream)) !important;
+  }
+}
