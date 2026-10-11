@@ -6,7 +6,7 @@ const experience = [
     role: 'Financial Advertising Analyst',
     organisation: 'AUDITMEDIA',
     location: 'Madrid / Remote',
-    text: 'Review and analysis of financial advertising across client digital platforms, with a focus on commercial offers, financing conditions, legal disclosures and promotional content. The role is built around accuracy, consistency and visible compliance in detail-sensitive environments.',
+    text: 'Review and analysis of financial advertising across client digital platforms, with a focus on commercial offers, financing conditions, legal disclosures and promotional content. The work depends on accuracy, consistency and close attention to detail.',
   },
   {
     period: '2025 / JUN 2026',
