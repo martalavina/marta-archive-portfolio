@@ -8,10 +8,7 @@ import './release.css';
 
 export const metadata = {
   metadataBase: new URL('https://marta-lavina-archive.vercel.app'),
-  title: {
-    default: 'Marta Laviña Archive | Sports, Brands & Experiences',
-    template: '%s | Marta Laviña',
-  },
+  title: 'Marta Laviña Archive | Sports, Brands & Experiences',
   description: 'An editorial archive of sports, brands and experiences by Marta Laviña, focused on sponsorship, fan experience, events and partnerships.',
   applicationName: 'Marta Laviña Archive',
   authors: [{ name: 'Marta Laviña' }],
