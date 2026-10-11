@@ -1,4 +1,330 @@
-/* Small release-only cleanup for elements that are not ready to be functional yet. */
+/* Final visual QA pass: softer colour, cleaner alignment and consistent section bleed. */
 
 /* Do not present Legal / Privacy as destinations until real pages exist. */
-.legal p:last-child { display: none; }
+.legal p:last-child { display: none !important; }
+
+/* --------------------------------------------------------------------------
+   1. COLOUR DISCIPLINE
+   Keep strong colour for true information/brand moments. Decorative colour is
+   mixed with the portfolio cream so typography stays dominant.
+   -------------------------------------------------------------------------- */
+
+/* Home / archive / profile */
+.interests { background: color-mix(in srgb, var(--sage) 25%, var(--cream)) !important; }
+.cv-cta { background: color-mix(in srgb, var(--butter) 24%, var(--cream)) !important; }
+.archive-project-feature { background: linear-gradient(90deg, color-mix(in srgb, var(--sky) 10%, var(--cream)), transparent 58%) !important; }
+.archive-note { background: linear-gradient(90deg, transparent 0 22%, color-mix(in srgb, var(--sage) 14%, var(--cream)) 22% 100%) !important; }
+.profile-perspective { background: color-mix(in srgb, var(--butter) 32%, var(--cream)) !important; }
+.profile-now-grid > div:first-child { background: color-mix(in srgb, var(--sky) 13%, var(--cream)) !important; }
+.profile-sport { background: color-mix(in srgb, var(--sage) 30%, var(--cream)) !important; }
+.profile-looking { background: color-mix(in srgb, var(--butter) 24%, var(--cream)) !important; }
+
+/* IKEA */
+.ikea-case .case-opportunity { background: color-mix(in srgb, var(--sky) 18%, var(--cream)) !important; }
+.ikea-case .platform-item-01 { background: color-mix(in srgb, var(--sky) 62%, var(--cream)) !important; }
+.ikea-case .platform-item-02 { background: color-mix(in srgb, var(--butter) 68%, var(--cream)) !important; }
+.ikea-case .platform-item-03 { background: color-mix(in srgb, var(--sage) 58%, var(--cream)) !important; }
+.ikea-case .experience-row-1 { background: linear-gradient(90deg, color-mix(in srgb, var(--sky) 9%, var(--cream)), transparent 64%) !important; }
+.ikea-case .experience-row-2 { background: linear-gradient(90deg, color-mix(in srgb, var(--butter) 20%, var(--cream)), transparent 64%) !important; }
+.ikea-case .experience-row-3 { background: linear-gradient(90deg, color-mix(in srgb, var(--sage) 12%, var(--cream)), transparent 64%) !important; }
+.ikea-case .case-capacity { background: color-mix(in srgb, var(--sage) 27%, var(--cream)) !important; }
+.ikea-case .native-behaviours,
+.ikea-case .budget-note { background: color-mix(in srgb, var(--butter) 55%, var(--cream)) !important; }
+.ikea-case .rights-note { background: color-mix(in srgb, var(--sky) 54%, var(--cream)) !important; }
+.ikea-case .process-grid { background: color-mix(in srgb, var(--sky) 9%, var(--cream)) !important; }
+.ikea-case .case-close { background: linear-gradient(90deg, transparent 0 72%, color-mix(in srgb, var(--sage) 22%, var(--cream)) 72% 100%) !important; }
+
+/* Canada */
+.canada-case .canada-hero-side { background: color-mix(in srgb, var(--canada-blush) 34%, var(--cream)) !important; }
+.canada-case .diagnosis-right { background: color-mix(in srgb, var(--canada-blush) 31%, var(--cream)) !important; }
+.canada-case .canada-platform { background: linear-gradient(90deg, transparent 0 18%, color-mix(in srgb, var(--canada-blush) 20%, var(--cream)) 18% 100%) !important; }
+.canada-case .canada-process-grid { background: color-mix(in srgb, var(--canada-blush) 18%, var(--cream)) !important; }
+
+/* Swarovski */
+.swarovski-case .skate-insight { background: linear-gradient(90deg, transparent 0 55%, color-mix(in srgb, var(--skate-ice) 34%, var(--cream)) 55% 100%) !important; }
+.swarovski-case .skate-fit { background: color-mix(in srgb, var(--skate-lilac) 28%, var(--cream)) !important; }
+.swarovski-case .skate-platform-item:nth-child(1) { background: color-mix(in srgb, var(--skate-ice) 60%, var(--cream)) !important; }
+.swarovski-case .skate-hero-activation { background: linear-gradient(90deg, color-mix(in srgb, var(--skate-ice) 25%, var(--cream)), transparent 78%) !important; }
+.swarovski-case .skate-real { background: color-mix(in srgb, var(--sage) 20%, var(--cream)) !important; }
+.swarovski-case .skate-process { background: color-mix(in srgb, var(--skate-ice) 19%, var(--cream)) !important; }
+
+/* VIP: keep the control-room logic, soften non-critical blue/yellow panels. */
+.vip-case .vip-number-band,
+.vip-case .flow-arrival,
+.vip-case .vip-experience-grid > div:first-child { background: color-mix(in srgb, var(--vip-sky) 68%, var(--cream)) !important; }
+.vip-case .vip-core-problem,
+.vip-case .vip-response-grid article:nth-child(2) { background: color-mix(in srgb, var(--vip-butter) 68%, var(--cream)) !important; }
+
+/* Celta: retain club/Atlantic coding without letting blocks overpower the text. */
+.celta-case .celta-statement,
+.celta-case .celta-credibility-grid > div:first-child,
+.celta-case .celta-kpi-grid article:nth-child(1) { background: color-mix(in srgb, var(--celta-green) 64%, var(--cream)) !important; }
+.celta-case .celta-platform-grid article:nth-child(1),
+.celta-case .celta-kpi-grid article:nth-child(2) { background: color-mix(in srgb, var(--celta-blue) 64%, var(--cream)) !important; }
+.celta-case .celta-context-note,
+.celta-case .celta-platform-grid article:nth-child(2) { background: color-mix(in srgb, var(--celta-butter) 68%, var(--cream)) !important; }
+
+/* --------------------------------------------------------------------------
+   2. COLOUR BLEED
+   Full-section colour should sit behind the column, not begin on the exact
+   same vertical edge as the first letter. Text position is preserved.
+   -------------------------------------------------------------------------- */
+
+.ikea-case .case-opportunity,
+.ikea-case .case-capacity,
+.swarovski-case .skate-insight,
+.swarovski-case .skate-fit,
+.swarovski-case .skate-hero-activation,
+.swarovski-case .skate-real,
+.swarovski-case .skate-process,
+.canada-case .canada-platform,
+.celta-case .celta-statement,
+.profile-perspective,
+.profile-sport,
+.profile-looking,
+.interests {
+  margin-left: -22px !important;
+  margin-right: -22px !important;
+  padding-left: 22px !important;
+  padding-right: 22px !important;
+}
+
+/* Blocks that are themselves modules/cards intentionally keep their own edge. */
+
+/* --------------------------------------------------------------------------
+   3. GRID / CARD ALIGNMENT
+   Comparable numbered items use the same internal vertical rhythm.
+   -------------------------------------------------------------------------- */
+
+.ikea-case .real-grid > div,
+.ikea-case .process-grid > div,
+.ikea-case .kpi-item,
+.canada-case .canada-audience-grid article,
+.canada-case .canada-kpi-grid article,
+.canada-case .canada-process-grid > div,
+.canada-case .canada-channel-grid > div,
+.swarovski-case .skate-platform-item,
+.swarovski-case .skate-runshow > div,
+.swarovski-case .skate-real-grid > div,
+.swarovski-case .skate-kpi-grid article,
+.swarovski-case .skate-process-steps > div,
+.vip-case .vip-assess-grid article,
+.vip-case .vip-metric-grid article,
+.celta-case .celta-fit-grid article,
+.celta-case .celta-platform-grid article,
+.celta-case .celta-kpi-grid article {
+  align-content: start !important;
+}
+
+/* Keep number, heading and body on a predictable shared baseline. */
+.ikea-case .real-grid > div,
+.ikea-case .process-grid > div,
+.ikea-case .kpi-item,
+.canada-case .canada-audience-grid article,
+.canada-case .canada-kpi-grid article,
+.canada-case .canada-process-grid > div,
+.swarovski-case .skate-real-grid > div,
+.swarovski-case .skate-kpi-grid article,
+.vip-case .vip-assess-grid article,
+.vip-case .vip-metric-grid article,
+.celta-case .celta-fit-grid article,
+.celta-case .celta-platform-grid article,
+.celta-case .celta-kpi-grid article {
+  display: grid !important;
+  grid-template-rows: auto minmax(3.2em, auto) 1fr !important;
+}
+
+.ikea-case .real-grid h3,
+.ikea-case .process-grid h3,
+.ikea-case .kpi-item h3,
+.canada-case .canada-audience-grid h3,
+.canada-case .canada-kpi-grid h3,
+.canada-case .canada-process-grid h3,
+.swarovski-case .skate-real-grid h3,
+.swarovski-case .skate-kpi-grid h3,
+.vip-case .vip-assess-grid h3,
+.vip-case .vip-metric-grid h3,
+.celta-case .celta-fit-grid h3,
+.celta-case .celta-platform-grid h3,
+.celta-case .celta-kpi-grid h3 {
+  margin-top: 18px !important;
+  margin-bottom: 9px !important;
+  align-self: start;
+}
+
+/* IKEA platform cards: labels and titles occupy a shared structure. */
+.ikea-case .platform-item {
+  display: grid !important;
+  grid-template-rows: auto 1fr auto !important;
+  align-content: stretch !important;
+}
+.ikea-case .platform-role { align-self: center; }
+.ikea-case .platform-item h3 { align-self: end; }
+
+/* --------------------------------------------------------------------------
+   4. MOBILE QA
+   Do not preserve desktop two-column compromises on a phone. Everything that
+   is meant to be compared should either align perfectly or stack cleanly.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 720px) {
+  /* Slightly smaller section bleed on phones. */
+  .ikea-case .case-opportunity,
+  .ikea-case .case-capacity,
+  .swarovski-case .skate-insight,
+  .swarovski-case .skate-fit,
+  .swarovski-case .skate-hero-activation,
+  .swarovski-case .skate-real,
+  .swarovski-case .skate-process,
+  .canada-case .canada-platform,
+  .celta-case .celta-statement,
+  .profile-perspective,
+  .profile-sport,
+  .profile-looking,
+  .interests {
+    margin-left: -14px !important;
+    margin-right: -14px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  /* Do not let full-colour section edges coincide with the text axis. */
+  .ikea-case .case-capacity,
+  .ikea-case .case-opportunity,
+  .swarovski-case .skate-fit,
+  .swarovski-case .skate-real,
+  .swarovski-case .skate-process,
+  .canada-case .canada-platform {
+    background-clip: border-box !important;
+  }
+
+  /* All four/five-part comparison systems stack on actual phones. */
+  .ikea-case .platform-index,
+  .ikea-case .real-grid,
+  .ikea-case .process-grid,
+  .ikea-case .kpi-grid,
+  .canada-case .canada-audience-grid,
+  .canada-case .canada-channel-grid,
+  .canada-case .canada-kpi-grid,
+  .canada-case .canada-process-grid,
+  .swarovski-case .skate-platform-index,
+  .swarovski-case .skate-runshow,
+  .swarovski-case .skate-real-grid,
+  .swarovski-case .skate-kpi-grid,
+  .swarovski-case .skate-process-steps,
+  .vip-case .vip-assess-grid,
+  .vip-case .vip-metric-grid,
+  .celta-case .celta-fit-grid,
+  .celta-case .celta-platform-grid,
+  .celta-case .celta-kpi-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Reset desktop neighbour-padding rules when cards become a vertical list. */
+  .ikea-case .real-grid > div,
+  .ikea-case .process-grid > div,
+  .ikea-case .kpi-item {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid color-mix(in srgb, var(--ink) 16%, transparent);
+  }
+  .ikea-case .real-grid > div:last-child,
+  .ikea-case .process-grid > div:last-child,
+  .ikea-case .kpi-item:last-child { border-bottom: 0; }
+
+  .canada-case .canada-audience-grid article,
+  .canada-case .canada-kpi-grid article,
+  .canada-case .canada-process-grid > div,
+  .canada-case .canada-channel-grid > div {
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--line) !important;
+  }
+
+  .swarovski-case .skate-platform-item,
+  .swarovski-case .skate-runshow > div,
+  .swarovski-case .skate-real-grid > div,
+  .swarovski-case .skate-kpi-grid article,
+  .swarovski-case .skate-process-steps > div,
+  .vip-case .vip-assess-grid article,
+  .vip-case .vip-metric-grid article,
+  .celta-case .celta-fit-grid article,
+  .celta-case .celta-platform-grid article,
+  .celta-case .celta-kpi-grid article {
+    min-height: 0 !important;
+  }
+
+  /* Once stacked, fixed title-row heights are unnecessary and can create gaps. */
+  .ikea-case .real-grid > div,
+  .ikea-case .process-grid > div,
+  .ikea-case .kpi-item,
+  .canada-case .canada-audience-grid article,
+  .canada-case .canada-kpi-grid article,
+  .canada-case .canada-process-grid > div,
+  .swarovski-case .skate-real-grid > div,
+  .swarovski-case .skate-kpi-grid article,
+  .vip-case .vip-assess-grid article,
+  .vip-case .vip-metric-grid article,
+  .celta-case .celta-fit-grid article,
+  .celta-case .celta-platform-grid article,
+  .celta-case .celta-kpi-grid article {
+    grid-template-rows: auto auto auto !important;
+  }
+
+  /* A consistent vertical start for numbered items. */
+  .ikea-case .platform-item,
+  .swarovski-case .skate-platform-item,
+  .vip-case .vip-assess-grid article,
+  .vip-case .vip-metric-grid article,
+  .celta-case .celta-fit-grid article,
+  .celta-case .celta-platform-grid article,
+  .celta-case .celta-kpi-grid article {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .ikea-case .platform-item {
+    min-height: 150px !important;
+  }
+
+  /* Experience modules use the same left edge and rhythm. */
+  .ikea-case .experience-row {
+    grid-template-columns: 48px 1fr !important;
+    gap: 14px !important;
+  }
+  .ikea-case .experience-detail-list {
+    grid-column: 2 !important;
+  }
+
+  /* Softer mobile colour, where the screen is mostly occupied by one block. */
+  .ikea-case .platform-item-01 { background: color-mix(in srgb, var(--sky) 50%, var(--cream)) !important; }
+  .ikea-case .platform-item-02 { background: color-mix(in srgb, var(--butter) 56%, var(--cream)) !important; }
+  .ikea-case .platform-item-03 { background: color-mix(in srgb, var(--sage) 48%, var(--cream)) !important; }
+  .vip-case .vip-number-band,
+  .vip-case .flow-arrival,
+  .vip-case .vip-experience-grid > div:first-child { background: color-mix(in srgb, var(--vip-sky) 55%, var(--cream)) !important; }
+  .celta-case .celta-statement,
+  .celta-case .celta-credibility-grid > div:first-child,
+  .celta-case .celta-kpi-grid article:nth-child(1) { background: color-mix(in srgb, var(--celta-green) 52%, var(--cream)) !important; }
+  .celta-case .celta-platform-grid article:nth-child(1),
+  .celta-case .celta-kpi-grid article:nth-child(2) { background: color-mix(in srgb, var(--celta-blue) 52%, var(--cream)) !important; }
+}
+
+@media (max-width: 430px) {
+  /* Give very small screens one unequivocal reading column. */
+  .case-meta-top,
+  .canada-meta-top,
+  .skate-meta-top,
+  .vip-meta-top,
+  .celta-meta,
+  .f1-meta { grid-template-columns: 1fr !important; }
+
+  .ikea-case .platform-item,
+  .swarovski-case .skate-platform-item,
+  .vip-case .vip-assess-grid article,
+  .vip-case .vip-metric-grid article,
+  .celta-case .celta-fit-grid article,
+  .celta-case .celta-platform-grid article,
+  .celta-case .celta-kpi-grid article { padding-inline: 18px !important; }
+}
