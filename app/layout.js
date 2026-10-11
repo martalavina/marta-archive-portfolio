@@ -5,6 +5,7 @@ import './final.css';
 import './project-bleed.css';
 import './qa.css';
 import './release.css';
+import MenuEnhancer from './MenuEnhancer';
 
 export const metadata = {
   metadataBase: new URL('https://marta-lavina-archive.vercel.app'),
@@ -31,10 +32,47 @@ export const metadata = {
   },
 };
 
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': 'https://marta-lavina-archive.vercel.app/#person',
+      name: 'Marta Laviña',
+      url: 'https://marta-lavina-archive.vercel.app',
+      sameAs: ['https://www.linkedin.com/in/martalavinaperez'],
+      jobTitle: 'Sports Management Student',
+      knowsAbout: [
+        'Sponsorship Activation',
+        'Brand Experience',
+        'Event Management',
+        'Fan Experience',
+        'Brand Partnerships',
+        'Sports Branding and Communication',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://marta-lavina-archive.vercel.app/#website',
+      url: 'https://marta-lavina-archive.vercel.app',
+      name: 'Marta Laviña Archive',
+      description: 'An editorial archive of sports, brands and experiences by Marta Laviña.',
+      author: { '@id': 'https://marta-lavina-archive.vercel.app/#person' },
+    },
+  ],
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <MenuEnhancer />
+        {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </body>
     </html>
   );
 }
