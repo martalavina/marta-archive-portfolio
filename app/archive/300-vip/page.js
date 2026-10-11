@@ -67,7 +67,7 @@ function MobileMenu() {
 }
 
 export const metadata = {
-  title: '300 VIP in 20 Minutes | Marta Laviña',
+  title: '300 VIP in 20 Minutes',
   description: 'An event operations and guest experience case focused on recovering a collapsed VIP check-in before a basketball game.',
 };
 
@@ -169,7 +169,7 @@ export default function VipOperationsPage() {
         <p className="vip-section-label">04 / BEFORE CHANGING THE SETUP</p>
         <div className="vip-assess-heading">
           <h2>Use what is actually there.</h2>
-          <p>The case does not specify staffing numbers, available lanes, scanners or entrance geometry. A professional response should assess those variables before prescribing a fixed setup.</p>
+          <p>The case does not specify staffing numbers, available lanes, scanners or entrance geometry. Those variables need to be assessed before prescribing a fixed setup.</p>
         </div>
         <div className="vip-assess-grid">
           {systemChecks.map(([title, copy], index) => (
