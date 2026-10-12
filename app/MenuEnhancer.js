@@ -32,7 +32,8 @@ export default function MenuEnhancer() {
     };
 
     const downloadCv = () => {
-      window.location.assign('/cv');
+      const cvUrl = new URL('/cv', window.location.origin).href;
+      window.location.assign(cvUrl);
     };
 
     const onClick = (event) => {
