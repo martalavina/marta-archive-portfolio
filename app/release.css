@@ -44,6 +44,33 @@
   background: color-mix(in srgb, var(--skate-ice) 19%, var(--cream)) !important;
 }
 
+/* CV controls are intentionally rendered as text controls across the site.
+   Once the PDF is available, give every existing CV surface the same active state. */
+.nav-disabled.cv-download-ready,
+.mobile-menu-disabled.cv-download-ready,
+.quick-disabled.cv-download-ready,
+.cv-placeholder.cv-download-ready {
+  cursor: pointer !important;
+  opacity: 1 !important;
+}
+
+.nav-disabled.cv-download-ready,
+.mobile-menu-disabled.cv-download-ready {
+  color: inherit !important;
+}
+
+.cv-download-ready:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 5px;
+}
+
+.quick-disabled.cv-download-ready:hover,
+.cv-placeholder.cv-download-ready:hover,
+.nav-disabled.cv-download-ready:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
 @media (max-width: 780px) {
   .ikea-case .case-opportunity::before,
   .ikea-case .case-capacity::before,
