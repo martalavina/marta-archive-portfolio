@@ -26,6 +26,8 @@ export default function MenuEnhancer() {
 
       document.querySelectorAll('.cv-placeholder').forEach((element) => {
         element.textContent = 'DOWNLOAD CV PDF';
+        const note = element.nextElementSibling;
+        if (note) note.textContent = 'DOWNLOAD MY CURRENT MASTER CV AS A PDF.';
       });
     };
 
