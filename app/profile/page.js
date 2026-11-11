@@ -1,202 +1,78 @@
-import './profile.css';
+import './profile-v2.css';
+import HomeNav from '../HomeNav';
 
-const experience = [
-  {
-    period: 'SEP 2026 / PRESENT',
-    role: 'Financial Advertising Analyst',
-    organisation: 'AUDITMEDIA',
-    location: 'Madrid / Remote',
-    text: 'Review and analysis of financial advertising across client digital platforms, with a focus on commercial offers, financing conditions, legal disclosures and promotional content. The work depends on accuracy, consistency and close attention to detail.',
-  },
-  {
-    period: '2025 / JUN 2026',
-    role: 'Guest Services Assistant',
-    organisation: 'Doble L Eventos y Azafatas',
-    location: 'Madrid',
-    text: 'Supported guest and fan experience across live events, including attendee assistance, operational coordination and event-day problem solving. Paid event work included Hexagon Cup 2026.',
-  },
-  {
-    period: 'OCT 2025',
-    role: 'Event Operations Volunteer',
-    organisation: 'X-Trial Madrid 2025',
-    location: 'Madrid',
-    text: 'Supported setup, access management and backstage operational flow across two event days.',
-  },
-  {
-    period: 'JUN 2025',
-    role: 'Access and Circulation Volunteer',
-    organisation: 'European Athletics Team Championship',
-    location: 'Madrid',
-    text: 'Supported stadium access, attendee circulation and medal ceremony delivery as part of the event coordination team.',
-  },
-  {
-    period: 'DEC 2022 / MAY 2023',
-    role: 'Sports Commentator',
-    organisation: 'Real Federación Española de Deportes de Hielo',
-    location: 'Spain',
-    text: 'Delivered official YouTube commentary for national figure skating competitions, translating technical knowledge into clear audience-facing communication.',
-  },
-];
-
-const capabilities = [
-  'Sponsorship Activation',
-  'Brand Experience',
-  'Event Operations',
-  'Guest & Fan Experience',
-  'Brand Partnerships',
-  'Sports Branding & Communication',
-  'Research & Concept Development',
-  'Media Analysis',
-];
-
-function MobileMenu() {
-  return (
-    <details className="mobile-nav">
-      <summary>MENU</summary>
-      <div className="mobile-menu-panel">
-        <div className="mobile-menu-top"><span>MARTA LAVIÑA</span><span className="mobile-menu-close">×</span></div>
-        <div className="mobile-menu-links">
-          <a href="/archive"><span>ARCHIVE</span><small>01</small></a>
-          <a href="/profile"><span>PROFILE</span><small>02</small></a>
-          <a href="/contact"><span>CONTACT</span><small>03</small></a>
-          <span className="mobile-menu-disabled"><span>CV</span><small>04</small></span>
-        </div>
-        <div className="mobile-menu-foot"><span>SPORTS / BRANDS / PEOPLE / EXPERIENCES</span></div>
-      </div>
-    </details>
-  );
-}
-
-export const metadata = {
-  title: 'Profile | Marta Laviña',
-  description: 'Profile, experience and perspective of Marta Laviña across sports business, events, sponsorship and brand experience.',
+export const metadata={
+ title:'About Marta Laviña | Sports, Brands & Experiences',
+ description:'Meet Marta Laviña, final-year Sports Management student, figure skater and sports business candidate working across brands, partnerships, events and communication.'
 };
 
-export default function ProfilePage() {
-  return (
-    <main>
-      <header className="site-header shell">
-        <a className="wordmark" href="/">MARTA LAVIÑA</a>
-        <nav className="desktop-nav" aria-label="Primary navigation">
-          <a href="/archive">ARCHIVE</a>
-          <a className="nav-active" href="/profile">PROFILE</a>
-          <a href="/contact">CONTACT</a>
-          <span className="nav-disabled">CV</span>
-        </nav>
-        <MobileMenu />
-      </header>
-
-      <section className="profile-hero shell reveal">
-        <div className="profile-kicker">
-          <span>PROFILE</span>
-          <span>MADRID / NICE</span>
-        </div>
-        <h1>I grew up inside sport.<br />Now I think about what happens <em>around it.</em></h1>
-        <div className="profile-hero-copy">
-          <p>I am currently completing my final year in Sports Management while building my career around sponsorship activation, brand experience, events and partnerships.</p>
-          <p>My perspective comes from experiencing sport from several sides: athlete, coach, commentator, event staff, analyst and fan.</p>
-        </div>
-      </section>
-
-      <section className="profile-perspective shell section-rule">
-        <p className="eyebrow">MY PERSPECTIVE</p>
-        <div className="profile-perspective-copy">
-          <p className="profile-large-copy">Sport taught me to notice the parts people do not always see.</p>
-          <div className="profile-columns">
-            <p>I have spent years inside competitive figure skating, where performance is only one part of the experience. Training, pressure, logistics, communication, audience understanding and the environment around an athlete all shape what eventually happens on the ice.</p>
-            <p>That is why I am interested in what surrounds competition: how a sponsor earns a role, how a fan moves through an event, how operations affect perception, and how a brand can become part of an experience instead of simply appearing inside it.</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="profile-now shell section-rule">
-        <p className="eyebrow">NOW</p>
-        <div className="profile-now-grid">
-          <div>
-            <span className="profile-label">EDUCATION</span>
-            <h2>Bachelor's Degree in Sports Management</h2>
-            <p>European Sport Business School</p>
-            <p>Sep 2024 / Sep 2027</p>
-            <p>Madrid / Nice</p>
-          </div>
-          <div>
-            <span className="profile-label">CURRENT ROLE</span>
-            <h2>Financial Advertising Analyst</h2>
-            <p>AUDITMEDIA</p>
-            <p>Sep 2026 / Present</p>
-            <p>Madrid / Remote</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="profile-experience shell section-rule">
-        <div className="profile-section-heading">
-          <p className="eyebrow">SELECTED EXPERIENCE</p>
-          <p>A mix of analysis, live events and sports communication.</p>
-        </div>
-        <div className="profile-timeline">
-          {experience.map((item, index) => (
-            <article className="profile-role" key={`${item.role}-${item.period}`}>
-              <div className="profile-role-index">0{index + 1}</div>
-              <div className="profile-role-period">{item.period}</div>
-              <div className="profile-role-main">
-                <h3>{item.role}</h3>
-                <p className="profile-role-org">{item.organisation}</p>
-                <p className="profile-role-location">{item.location}</p>
-                <p className="profile-role-text">{item.text}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="profile-sport shell section-rule">
-        <p className="eyebrow">SPORT FROM THE INSIDE</p>
-        <div>
-          <h2>International figure skater since 2016.</h2>
-          <p>Competition and training across Spain, Italy, France, Canada, Slovenia and Bulgaria gave me first-hand exposure to high-performance sport and international sporting environments.</p>
-          <p>I have also coached skaters, performed in live ice shows and worked with sports brands as an athlete-led content collaborator. Those experiences shape how I think about athletes, audiences and brand credibility.</p>
-        </div>
-      </section>
-
-      <section className="profile-capabilities shell section-rule">
-        <p className="eyebrow">WORKING ACROSS</p>
-        <div className="profile-capability-list">
-          {capabilities.map((capability, index) => (
-            <div className="profile-capability" key={capability}>
-              <span>{String(index + 1).padStart(2, '0')}</span>
-              <p>{capability}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="profile-languages shell section-rule">
-        <p className="eyebrow">LANGUAGES</p>
-        <div className="profile-language-grid">
-          <div><span>01</span><h3>Spanish</h3><p>Native</p></div>
-          <div><span>02</span><h3>English</h3><p>Professional working proficiency</p></div>
-          <div><span>03</span><h3>French</h3><p>Professional working proficiency</p></div>
-        </div>
-      </section>
-
-      <section className="profile-looking shell section-rule">
-        <p className="eyebrow">WHAT I AM LOOKING FOR</p>
-        <div>
-          <h2>Work where sport, brands and people actually meet.</h2>
-          <p>I am particularly interested in sponsorship activation, brand experience, event management, fan experience and brand partnerships within international sports environments.</p>
-          <div className="profile-cta-row">
-            <a className="text-link" href="/archive">VIEW THE ARCHIVE <span className="ui-arrow ui-arrow-right" aria-hidden="true" /></a>
-            <a className="text-link" href="/contact">GET IN TOUCH <span className="ui-arrow ui-arrow-right" aria-hidden="true" /></a>
-          </div>
-        </div>
-      </section>
-
-      <footer className="footer shell section-rule">
-        <div><strong>MARTA LAVIÑA</strong><p>Sports, brands & experiences.</p></div>
-        <div className="footer-links"><a href="mailto:mlavinaperez@gmail.com">Email</a><a href="https://www.linkedin.com/in/martalavinaperez" target="_blank" rel="noreferrer">LinkedIn</a></div>
-        <div className="legal"><p>© Marta Laviña 2026</p><p><span>Legal</span> · <span>Privacy</span></p></div>
-      </footer>
-    </main>
-  );
+const experiences=[
+ {when:'2026 / PRESENT',title:'Financial Advertising Analyst',place:'AUDITMEDIA',description:'Reviewing financial advertising across digital platforms and checking offers, legal disclosures and promotional content. Work that depends on accuracy and close attention to detail.'},
+ {when:'2025 / 2026',title:'Guest Services & Event Support',place:'Doble L Eventos y Azafatas / Hexagon Cup',description:'Paid event work supporting guest experience, attendee assistance and live operational delivery.'},
+ {when:'2025',title:'Sports Event Volunteer',place:'European Athletics / X-Trial Madrid',description:'Supporting circulation, access and event operations within live sporting environments.'},
+ {when:'2022 / 2023',title:'Figure Skating Commentator',place:'Real Federación Española de Deportes de Hielo',description:'Commentary for national competitions, making technical performances understandable to audiences.'}
+];
+const interests=[
+ ['Strategy & Partnerships','Finding where a brand can contribute something genuinely useful to sport and its audiences.'],
+ ['Creative & Content','Building campaigns and content that have a clear idea behind the visual execution.'],
+ ['Events & Experience','Thinking about fan journeys, operational details and the moments people remember.']
+];
+export default function ProfilePage(){
+ return <div className="about-v2">
+  <HomeNav brandHref="/" />
+  <main className="about-v2-main">
+   <header className="about-v2-hero">
+    <div className="about-v2-top"><span>A LITTLE MORE ABOUT ME</span><span>MADRID / NICE</span></div>
+    <div className="about-v2-hero-grid">
+     <div>
+      <p className="about-v2-hello">Hi again, I'm Marta.</p>
+      <h1>Sport has always<br/>been <em>part of my world.</em></h1>
+      <p className="about-v2-lead">I'm a final-year Sports Management student interested in the ideas, brands and people that shape everything around competition.</p>
+      <a className="about-v2-link" href="/cv">Download my CV ↗</a>
+     </div>
+     <div className="about-v2-image"><img src="/home-v2/marta-flower.webp" alt="Marta smiling by the sea, inside a soft flower-shaped portrait" width="900" height="506"/></div>
+    </div>
+   </header>
+   <section className="about-v2-story">
+    <div className="about-v2-count">01 / MY PERSPECTIVE</div>
+    <div>
+     <h2>I've seen sport from <em>more than one side.</em></h2>
+     <p>As a competitive figure skater, I've spent years training, performing and working in an environment where the part people see is only a fraction of what happens behind the scenes.</p>
+     <p>I've also supported live events, commentated competitions and worked with advertising analysis. Those different perspectives shape how I think about experiences, brands and audiences.</p>
+    </div>
+   </section>
+   <section className="about-v2-current">
+    <div className="about-v2-count">02 / RIGHT NOW</div>
+    <div className="about-v2-current-grid">
+     <article><span>STUDYING</span><h3>Sports Management</h3><p>European Sport Business School</p><p>2024–2027 / Madrid & Nice</p></article>
+     <article><span>WORKING</span><h3>Financial Advertising Analyst</h3><p>AUDITMEDIA</p><p>September 2026 – Present / Remote</p></article>
+    </div>
+   </section>
+   <section className="about-v2-experience">
+    <div className="about-v2-count">03 / SELECTED EXPERIENCE</div>
+    <div><h2>Off the ice, <em>on the ground.</em></h2>
+     <div className="about-v2-timeline">{experiences.map(x=><article key={x.title}><span>{x.when}</span><div><h3>{x.title}</h3><p className="about-v2-place">{x.place}</p><p>{x.description}</p></div></article>)}</div>
+    </div>
+   </section>
+   <section className="about-v2-areas">
+    <div className="about-v2-count">04 / WHAT I BRING</div>
+    <div><h2>One perspective.<br/><em>Different ways to use it.</em></h2>
+     <div className="about-v2-areas-grid">{interests.map(([title,description],i)=><article key={title}><span>0{i+1}</span><h3>{title}</h3><p>{description}</p></article>)}</div>
+    </div>
+   </section>
+   <section className="about-v2-footnotes">
+    <div className="about-v2-count">05 / A FEW DETAILS</div>
+    <div className="about-v2-footnotes-grid">
+     <article><span>SPORT</span><h3>Figure skating</h3><p>Competitive skater, coaching and live ice show experience.</p></article>
+     <article><span>LANGUAGES</span><h3>ES / EN / FR</h3><p>Spanish native. English and French professional working proficiency.</p></article>
+     <article><span>LOCATION</span><h3>Madrid / Nice</h3><p>Interested in international sports environments and open to relocation.</p></article>
+    </div>
+   </section>
+   <section className="about-v2-final">
+     <div><p>WHAT'S NEXT?</p><h2>Let's talk about<br/><em>what happens around the game.</em></h2></div>
+     <div><a href="/archive">Explore my work ↗</a><a href="/contact">Get in touch ↗</a></div>
+   </section>
+  </main>
+  <footer className="about-v2-footer"><span>© Marta Laviña 2026</span><span>Sports, brands & experiences.</span><a href="/contact">Contact ↗</a></footer>
+ </div>
 }
