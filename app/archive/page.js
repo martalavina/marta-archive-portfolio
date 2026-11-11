@@ -56,8 +56,8 @@ const projects = [
     type: 'Academic project',
     image: '/home-v2/cover-outdoormix.webp',
     coverClass: 'work-card-outdoormix',
+    href: '/archive/outdoormix-winter',
     lenses: ['strategy', 'content', 'experience'],
-    // A dedicated case page is being developed. Keep this entry non-interactive until it exists.
   },
   {
     id: 'formula-1-governance',
