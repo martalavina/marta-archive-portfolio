@@ -1,9 +1,9 @@
 import ProjectStory from '../../ProjectStory';
 export const metadata={title:'OutdoorMix Winter | Marta Laviña',description:'Adaptive sports marketing and ticketing strategy when budget, capacity and competition change.'};
 const story={
- meta:'OUTDOORMIX WINTER 2027 / ACADEMIC TEAM PROJECT',eyebrow:'SPORTS MARKETING / TICKETING / ADAPTIVE ACTIVATION',
+ meta:'OCTOBER 2026 / ACADEMIC TEAM PROJECT',eyebrow:'SPORTS MARKETING / TICKETING / ADAPTIVE ACTIVATION',
  title:'What happens when',titleAccent:'the brief changes?',lead:'Less budget. Smaller capacity. A free competitor. The response was to change priorities, not just the spreadsheet.',
- role:'Academic team exercise / marketing decision-making and ticketing strategy. This is a proposed plan, not event results.',
+ role:'Developed October 2026 for OutdoorMix Winter 2027 / academic team project. This is a proposed plan, not event results.',
  accent:'#d6ecef',highlight:'#087f94',image:'/home-v2/cover-outdoormix.webp',wide:true,imageAlt:'OutdoorMix Winter creative title artwork from the original strategy presentation',
  disclaimer:'Academic planning project for OutdoorMix Winter 2027, not a claim of a commissioned campaign or an executed ticketing result.',
  sections:[
