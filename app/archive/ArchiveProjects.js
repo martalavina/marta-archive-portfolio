@@ -2,79 +2,79 @@
 
 import { useMemo, useState } from 'react';
 
-const filters = ['ALL', 'SPONSORSHIP', 'FAN EXPERIENCE', 'EVENTS', 'BRAND', 'CAMPAIGNS', 'RESEARCH'];
-
-function Arrow() {
-  return <span className="ui-arrow ui-arrow-up-right" aria-hidden="true" />;
-}
-
-function entryLabel(project) {
-  if (project.type === 'NOTE') return 'READ NOTE';
-  if (project.type === 'STUDY') return 'READ STUDY';
-  return 'READ FULL CASE';
-}
+const lenses = [
+  { id: 'all', label: 'All work' },
+  { id: 'strategy', label: 'Strategy & Partnerships' },
+  { id: 'creative', label: 'Creative & Concepts' },
+  { id: 'content', label: 'Content & Social' },
+  { id: 'experience', label: 'Events & Experiences' },
+];
 
 export default function ArchiveProjects({ projects }) {
-  const [activeFilter, setActiveFilter] = useState('ALL');
-
-  const visibleProjects = useMemo(() => {
-    if (activeFilter === 'ALL') return projects;
-    return projects.filter((project) => project.themes?.includes(activeFilter));
-  }, [activeFilter, projects]);
+  const [active, setActive] = useState('all');
+  const shown = useMemo(
+    () => active === 'all' ? projects : projects.filter((p) => p.lenses.includes(active)),
+    [projects, active]
+  );
 
   return (
-    <>
-      <section className="archive-lenses shell section-rule">
-        <p className="eyebrow">BROWSE THE ARCHIVE</p>
-        <div className="archive-lens-list" aria-label="Filter archive by theme">
-          {filters.map((filter) => (
-            <button
-              key={filter}
-              type="button"
-              className={activeFilter === filter ? 'archive-lens-active' : ''}
-              aria-pressed={activeFilter === filter}
-              onClick={() => setActiveFilter(filter)}
-            >
-              {filter}
-            </button>
-          ))}
-        </div>
-      </section>
+    <div className="work-collection">
+      <div className="work-browse-top">
+        <p>FIND YOUR WAY IN</p>
+        <p>PROJECTS / CONCEPTS / SELECTED THINKING</p>
+      </div>
 
-      <section className="archive-index shell section-rule" aria-live="polite">
-        <div className="archive-index-heading">
-          <span>INDEX</span>
-          <span>{String(visibleProjects.length).padStart(2, '0')} {visibleProjects.length === 1 ? 'ENTRY' : 'ENTRIES'}</span>
-        </div>
+      <div className="work-filters" role="group" aria-label="Filter work by discipline">
+        {lenses.map((lens) => (
+          <button
+            type="button"
+            key={lens.id}
+            className={active === lens.id ? 'work-filter is-active' : 'work-filter'}
+            aria-pressed={active === lens.id}
+            onClick={() => setActive(lens.id)}
+          >{lens.label}</button>
+        ))}
+      </div>
 
-        {visibleProjects.map((project) => {
-          const originalIndex = projects.findIndex((item) => item.code === project.code);
-          return (
-            <article id={project.id} className={`archive-project archive-project-${project.weight}`} key={project.code}>
-              <div className="archive-project-num">{String(originalIndex + 1).padStart(2, '0')}</div>
-              <div className="archive-project-main">
-                <p className="entry-meta">{project.code} · {project.date} · {project.type}</p>
-                <p className="archive-project-category">{project.category}</p>
-                <h2>{project.headline}</h2>
-                <p className="archive-project-client">{project.client}</p>
-                <p className="archive-project-title">{project.title}</p>
-                <p className="archive-project-description">{project.description}</p>
-                <a className="archive-project-link" href={project.href}>{entryLabel(project)} <Arrow /></a>
-              </div>
-              {project.weight === 'feature' && (
-                <div className="archive-feature-mark" aria-hidden="true">
-                  <span>FEATURED</span>
-                  <span>{project.code}</span>
+      <div className="work-results-meta" aria-live="polite">
+        <span>{shown.length} {shown.length === 1 ? 'PROJECT' : 'PROJECTS'}</span>
+        <span>{lenses.find((lens) => lens.id === active)?.label}</span>
+      </div>
+
+      <div className={active === 'all' ? 'work-grid' : 'work-grid work-grid-filtered'}>
+        {shown.map((project, i) => {
+          const hasPage = Boolean(project.href);
+          const classes = ['work-card', project.size || '', project.coverClass || '', !hasPage ? 'work-card-pending' : ''].filter(Boolean).join(' ');
+          const art = (
+            <div className="work-card-art">
+              {project.image ? (
+                <img src={project.image} alt="" loading={i < 2 ? 'eager' : 'lazy'} />
+              ) : (
+                <div className="work-f1-art" aria-hidden="true">
+                  <span>WHO CONTROLS</span>
+                  <strong>FORMULA 1?</strong>
+                  <small>GOVERNANCE / REGULATION / COMMERCIAL POWER</small>
                 </div>
               )}
-            </article>
+              {hasPage && <span className="work-open" aria-hidden="true">VIEW PROJECT ↗</span>}
+              {!hasPage && <span className="work-soon">CASE PAGE IN DEVELOPMENT</span>}
+            </div>
           );
+          const meta = (
+            <div className="work-card-meta">
+              <div>
+                <p>{project.discipline} <span aria-hidden="true">/</span> {project.type}</p>
+                <h2>{project.title}</h2>
+              </div>
+              <span className="work-card-index">{project.number}</span>
+            </div>
+          );
+          return hasPage
+            ? <a className={classes} href={project.href} key={project.id} aria-label={project.title + ', ' + project.type}>{art}{meta}</a>
+            : <article className={classes} key={project.id}>{art}{meta}</article>;
         })}
-
-        {visibleProjects.length === 0 && (
-          <p className="archive-empty">No entries in this lens yet.</p>
-        )}
-      </section>
-    </>
+      </div>
+      {shown.length === 0 && <p className="work-empty">There are no projects in this collection yet.</p>}
+    </div>
   );
 }
