@@ -29,9 +29,9 @@ export default function Home() {
         </div>
       </section>
       <div className="wave" aria-label="The moments, the people, the experiences beyond the game">
-        <svg viewBox="0 0 1400 220" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-          <defs><path id="text-wave" d="M -100 110 C 120 22, 300 193, 520 106 S 890 25, 1120 107 S 1350 190, 1530 100" /></defs>
-          <text><textPath href="#text-wave" startOffset="1%">the moments, the people, the experiences beyond the game · the moments, the people, the experiences beyond the game</textPath></text>
+        <svg viewBox="0 0 1400 180" preserveAspectRatio="none" aria-hidden="true">
+          <defs><path id="text-wave" d="M -275 92 C -45 15, 155 170, 390 95 S 800 18, 1030 100 S 1420 170, 1680 90" /></defs>
+          <text><textPath href="#text-wave" startOffset="0">the moments, the people, the experiences beyond the game · the moments, the people, the experiences beyond the game · the moments, the people, the experiences beyond the game · the moments, the people, the experiences beyond the game</textPath></text>
         </svg>
       </div>
       <div className="content">
