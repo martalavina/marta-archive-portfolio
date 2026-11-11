@@ -15,7 +15,6 @@ const projects = [
     discipline: 'Sponsorship / Fan Experience',
     type: 'Independent concept',
     image: '/home-v2/cover-ikea.webp',
-    size: 'work-card-featured',
     lenses: ['strategy', 'creative', 'experience'],
     href: '/archive/ikea-le-mans',
   },
