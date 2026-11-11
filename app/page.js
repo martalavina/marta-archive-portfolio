@@ -44,9 +44,9 @@ export default function Home() {
             {projects.map(p => <a key={p.href} className={'project '+p.css} href={p.href}>
               <small>{p.category}</small><strong>{p.name}</strong>
             </a>)}
-            <div className="project outdoormix" aria-label="OutdoorMix Winter project, coming soon">
-              <small>Strategy / Coming soon</small><strong>OutdoorMix Winter</strong>
-            </div>
+            <a className="project outdoormix" href="/archive/outdoormix-winter" aria-label="OutdoorMix Winter, marketing and ticketing strategy">
+              <small>Marketing / Ticketing</small><strong>OutdoorMix Winter</strong>
+            </a>
           </div>
         </section>
         <section className="about" id="about">
