@@ -1,23 +1,6 @@
 import './contact.css';
 import ContactForm from './ContactForm';
-
-function MobileMenu() {
-  return (
-    <details className="mobile-nav">
-      <summary>MENU</summary>
-      <div className="mobile-menu-panel">
-        <div className="mobile-menu-top"><span>MARTA LAVIÑA</span><span className="mobile-menu-close">×</span></div>
-        <div className="mobile-menu-links">
-          <a href="/archive"><span>ARCHIVE</span><small>01</small></a>
-          <a href="/profile"><span>PROFILE</span><small>02</small></a>
-          <a href="/contact"><span>CONTACT</span><small>03</small></a>
-          <span className="mobile-menu-disabled"><span>CV</span><small>04</small></span>
-        </div>
-        <div className="mobile-menu-foot"><span>SPORTS / BRANDS / PEOPLE / EXPERIENCES</span></div>
-      </div>
-    </details>
-  );
-}
+import HomeNav from '../HomeNav';
 
 export const metadata = {
   title: 'Contact | Marta Laviña',
@@ -26,17 +9,9 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <main>
-      <header className="site-header shell">
-        <a className="wordmark" href="/">MARTA LAVIÑA</a>
-        <nav className="desktop-nav" aria-label="Primary navigation">
-          <a href="/archive">ARCHIVE</a>
-          <a href="/profile">PROFILE</a>
-          <a className="nav-active" href="/contact">CONTACT</a>
-          <span className="nav-disabled">CV</span>
-        </nav>
-        <MobileMenu />
-      </header>
+    <div className="contact-consistent">
+      <HomeNav brandHref="/" />
+      <main>
 
       <section className="contact-hero shell reveal">
         <div className="contact-kicker">
@@ -82,6 +57,7 @@ export default function ContactPage() {
         </div>
         <div className="legal"><p>© Marta Laviña 2026</p><p><span>Legal</span> · <span>Privacy</span></p></div>
       </footer>
-    </main>
+      </main>
+    </div>
   );
 }
