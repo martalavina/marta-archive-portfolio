@@ -243,3 +243,41 @@
   .contact-submit-row p { text-align: left; }
   .contact-note { grid-template-columns: 1fr; gap: 16px; padding: 34px 0 42px; }
 }
+
+
+/* Consistent site navigation. Contact content, form and stripe composition stay intact. */
+.contact-consistent { --paper:#f1eddc; --ink:#141b31; background:var(--paper); color:var(--ink); min-height:100vh; }
+.contact-consistent .site-nav {
+  height:76px; display:flex; justify-content:space-between; align-items:center;
+  padding:0 max(5vw,24px); position:relative; z-index:11; background:var(--paper);
+}
+.contact-consistent .brand {font-family:'Instrument Serif',serif; font-size:1.75rem; color:var(--ink)}
+.contact-consistent .nav-links {display:flex; align-items:center; gap:32px; font-size:.9rem}
+.contact-consistent .nav-links a {color:var(--ink);text-decoration:none}
+.contact-consistent .nav-links a:hover {text-decoration:underline;text-underline-offset:5px}
+.contact-consistent .nav-links a[href="/contact"] {text-decoration:underline;text-underline-offset:5px}
+.contact-consistent .menu-button {display:none;background:transparent;border:1px solid var(--ink);color:var(--ink);border-radius:24px;padding:9px 15px;font:inherit}
+.contact-consistent .contact-panel {background:color-mix(in srgb,var(--paper) 96%,white)}
+.contact-consistent .contact-stage .contact-stripes {
+ background:repeating-linear-gradient(90deg,
+ color-mix(in srgb,var(--sky) 66%,var(--paper)) 0,
+ color-mix(in srgb,var(--sky) 66%,var(--paper)) 56px,
+ color-mix(in srgb,var(--paper) 90%,white) 56px,
+ color-mix(in srgb,var(--paper) 90%,white) 112px);
+}
+@media(max-width:640px){
+ .contact-consistent .site-nav {height:65px;padding:0 20px}
+ .contact-consistent .brand {font-size:1.5rem}
+ .contact-consistent .menu-button {display:block}
+ .contact-consistent .nav-links {display:none;position:absolute;top:65px;left:0;right:0;
+  background:var(--paper);padding:20px;flex-direction:column;align-items:flex-start;gap:20px;
+  box-shadow:0 12px 20px rgba(0,0,0,.08)}
+ .contact-consistent .nav-links.open {display:flex}
+ .contact-consistent .contact-stage .contact-stripes {
+  background:repeating-linear-gradient(90deg,
+   color-mix(in srgb,var(--sky) 66%,var(--paper)) 0,
+   color-mix(in srgb,var(--sky) 66%,var(--paper)) 30px,
+   color-mix(in srgb,var(--paper) 90%,white) 30px,
+   color-mix(in srgb,var(--paper) 90%,white) 60px);
+ }
+}
