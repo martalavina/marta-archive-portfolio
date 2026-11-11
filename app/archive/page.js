@@ -53,7 +53,7 @@ const projects = [
     title: 'OutdoorMix Winter',
     number: '05',
     discipline: 'Marketing / Ticketing',
-    type: 'Academic project',
+    type: 'Academic project · Oct 2026',
     image: '/home-v2/cover-outdoormix.webp',
     coverClass: 'work-card-outdoormix',
     href: '/archive/outdoormix-winter',
