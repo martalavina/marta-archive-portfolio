@@ -1,166 +1,73 @@
-const recentEntries = [
-  {
-    code: 'ML-001',
-    date: 'OCT 2026',
-    category: 'SPONSORSHIP / FAN EXPERIENCE',
-    title: 'What if endurance was about the fans too?',
-    client: 'IKEA × 24H Le Mans',
-    description: 'A fan experience concept built around the human side of a 24-hour race.',
-    href: '/archive/ikea-le-mans',
-  },
-  {
-    code: 'ML-002',
-    date: '19 MAY 2026',
-    category: 'CAMPAIGN / FOOTBALL',
-    title: 'A host nation should feel like one.',
-    client: 'Canada Soccer / Our Game Now',
-    description: 'Turning an existing campaign into a physical, digital and participatory host-nation experience.',
-    href: '/archive/canada-soccer',
-  },
+import './home-v2.css';
+import HomeNav from './HomeNav';
+
+const projects = [
+  { name: 'IKEA × 24H Le Mans', category: 'Sponsorship / Fan Experience', css: 'big lemans', href: '/archive/ikea-le-mans' },
+  { name: 'Swarovski × World Junior Figure Skating', category: 'Brand Experience', css: 'skate', href: '/archive/swarovski-figure-skating' },
+  { name: 'Canada Soccer', category: 'Campaign Strategy', css: 'canada', href: '/archive/canada-soccer' },
+  { name: 'Celta × ECOALF', category: 'Partnership Strategy', css: 'celta', href: '/archive/celta-ecoalf' },
 ];
 
-const interests = [
-  'Why some sponsorships feel natural and others feel forced.',
-  'What fans remember after the final whistle.',
-  'How operational decisions shape an experience.',
-  'Why sport deserves better storytelling.',
-];
-
-function Arrow({ direction = 'right' }) {
-  return <span className={`ui-arrow ui-arrow-${direction}`} aria-hidden="true" />;
-}
-
-function MobileMenu() {
-  return (
-    <details className="mobile-nav">
-      <summary>MENU</summary>
-      <div className="mobile-menu-panel">
-        <div className="mobile-menu-top">
-          <span>MARTA LAVIÑA</span>
-          <span className="mobile-menu-close" aria-hidden="true">×</span>
-        </div>
-        <div className="mobile-menu-links">
-          <a href="/archive"><span>ARCHIVE</span><small>01</small></a>
-          <a href="/profile"><span>PROFILE</span><small>02</small></a>
-          <a href="/contact"><span>CONTACT</span><small>03</small></a>
-          <span className="mobile-menu-disabled"><span>CV</span><small>04</small></span>
-        </div>
-        <div className="mobile-menu-foot"><span>SPORTS / BRANDS / PEOPLE / EXPERIENCES</span></div>
-      </div>
-    </details>
-  );
-}
+export const metadata = {
+  title: 'Marta Laviña | Sports, Brands & Experiences',
+  description: 'Marta Laviña, final-year Sports Management student exploring sports marketing, sponsorship, creative concepts and live experiences.',
+};
 
 export default function Home() {
-  return (
-    <main>
-      <header className="site-header shell">
-        <a className="wordmark" href="#top">MARTA LAVIÑA</a>
-        <nav className="desktop-nav" aria-label="Primary navigation">
-          <a href="/archive">ARCHIVE</a>
-          <a href="/profile">PROFILE</a>
-          <a href="/contact">CONTACT</a>
-          <span className="nav-disabled" aria-label="CV download will be enabled when the final PDF is added">CV</span>
-        </nav>
-        <MobileMenu />
-      </header>
-
-      <section id="top" className="hero shell">
-        <div className="hero-copy reveal">
-          <h1>Marta Laviña</h1>
-          <p className="hero-line">I think about what happens <em>around the game.</em></p>
-          <p className="eyebrow">AN EDITORIAL ARCHIVE OF SPORTS, BRANDS & EXPERIENCES.</p>
-          <p className="intro"><span className="student-status">I’m currently completing my final year in Sports Management.</span> My work focuses on sponsorship, brand experience and events, especially the moments where strategy becomes something people can actually experience.</p>
-          <p className="meta-row">MADRID / NICE · SPORTS MANAGEMENT · SPONSORSHIP · BRAND EXPERIENCE · EVENTS</p>
-        </div>
-
-        <figure className="hero-image reveal-delay">
-          <img
-            src="/marta-hero-v2"
-            alt="Portrait of Marta Laviña outdoors in warm evening light"
-          />
-          <div className="hero-stamp" aria-hidden="true">
-            <span>SPORTS</span>
-            <span>BRANDS</span>
-            <span>PEOPLE</span>
-            <span>PLACES</span>
+  return <div className="home-v2">
+    <HomeNav />
+    <main id="top">
+      <section className="hero" aria-labelledby="home-title">
+        <div className="hero-inner">
+          <div className="hero-copy">
+            <p className="hello">Oh, hey! So glad you could stop by.</p>
+            <h1 id="home-title">I’m Marta.</h1>
+            <p className="hero-blurb">Final-year Sports Management student exploring <strong>sports marketing, partnerships, creative concepts and live experiences.</strong></p>
+            <a className="primary-action" href="#work">Explore my work <span aria-hidden="true">↗</span></a>
           </div>
-        </figure>
-      </section>
-
-      <section id="latest" className="archive shell section-rule">
-        <div className="section-heading">
-          <h2>Latest from<br />the Archive</h2>
-          <p>TWO RECENT EXPLORATIONS INTO SPORTS, BRANDS AND PEOPLE.</p>
-        </div>
-
-        <div className="entries">
-          {recentEntries.map((entry, index) => (
-            <article className="entry" key={entry.code}>
-              <div className="entry-index">0{index + 1}</div>
-              <div className="entry-body">
-                <p className="entry-meta">{entry.code} · {entry.date} · {entry.category}</p>
-                <h3>{entry.title}</h3>
-                <p className="client">{entry.client}</p>
-                <p className="description">{entry.description}</p>
-                <a className="text-link" href={entry.href}>READ ENTRY <Arrow direction="up-right" /></a>
-              </div>
-            </article>
-          ))}
+          <img className="portrait" src="/home-v2/marta-flower.webp" width="900" height="506" alt="Marta smiling at the beach, framed inside an organic flower shape" fetchPriority="high" />
         </div>
       </section>
-
-      <section className="interests shell section-rule">
-        <h2>Currently<br />interested in</h2>
-        <div className="interest-grid">
-          {interests.map((interest, index) => (
-            <div className="interest" key={interest}>
-              <span>0{index + 1}</span>
-              <p>{interest}</p>
+      <div className="wave" aria-label="The moments, the people, the experiences beyond the game">
+        <svg viewBox="0 0 1400 220" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><path id="text-wave" d="M -100 110 C 120 22, 300 193, 520 106 S 890 25, 1120 107 S 1350 190, 1530 100" /></defs>
+          <text><textPath href="#text-wave" startOffset="1%">the moments, the people, the experiences beyond the game · the moments, the people, the experiences beyond the game</textPath></text>
+        </svg>
+      </div>
+      <div className="content">
+        <section id="work" aria-labelledby="work-title">
+          <div className="section-header">
+            <div><p className="kicker">A few things I've been working on</p><h2 id="work-title">Selected work</h2></div>
+            <a href="/archive">All work ↗</a>
+          </div>
+          <div className="project-grid">
+            {projects.map(p => <a key={p.href} className={'project '+p.css} href={p.href}>
+              <small>{p.category}</small><strong>{p.name}</strong>
+            </a>)}
+            <div className="project outdoormix" aria-label="OutdoorMix Winter project, coming soon">
+              <small>Strategy / Coming soon</small><strong>OutdoorMix Winter</strong>
             </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="profile-teaser shell section-rule">
-        <p className="eyebrow">BEHIND THE ARCHIVE</p>
-        <div>
-          <h2>Sport first. Business second.<br />Now I think about both.</h2>
-          <p>Before studying the business of sport, I experienced it from the inside. That perspective still shapes how I think about fans, athletes, brands and events.</p>
-          <a className="text-link" href="/profile">READ MY PROFILE <Arrow direction="up-right" /></a>
-        </div>
-      </section>
-
-      <section className="quick shell section-rule">
-        <h2>Looking for<br />something specific?</h2>
-        <div className="quick-links">
-          <a href="/archive"><span>01 / Explore the archive</span><Arrow /></a>
-          <a href="/profile"><span>02 / My profile</span><Arrow /></a>
-          <span className="quick-disabled"><span>03 / Download my CV</span><span>PDF TO BE ADDED</span></span>
-          <a href="/contact"><span>04 / Get in touch</span><Arrow /></a>
-        </div>
-      </section>
-
-      <section className="cv-cta shell section-rule">
-        <p className="eyebrow">PREFER THE TRADITIONAL VERSION?</p>
-        <span className="cv-placeholder">CV PDF COMING NEXT</span>
-        <p>THE DOWNLOAD WILL BE ENABLED WHEN THE FINAL CV IS ADDED.</p>
-      </section>
-
-      <footer className="footer shell section-rule">
-        <div>
-          <strong>MARTA LAVIÑA</strong>
-          <p>Sports, brands & experiences.</p>
-        </div>
-        <div className="footer-links">
-          <a href="mailto:mlavinaperez@gmail.com">Email</a>
-          <a href="https://www.linkedin.com/in/martalavinaperez" target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
-        <div className="legal">
-          <p>© Marta Laviña 2026</p>
-          <p><span>Legal</span> · <span>Privacy</span></p>
-        </div>
-      </footer>
+          </div>
+        </section>
+        <section className="about" id="about">
+          <div><p className="kicker">Beyond the work</p><h2>Sport from the inside.</h2></div>
+          <div><p>I think about what happens around the game.</p>
+            <p className="about-secondary">I've spent years experiencing sport as an athlete and as part of the teams that make events happen. Now I bring that perspective to sponsorship, brand experiences, events and the creative ideas that connect them.</p>
+            <a className="primary-action" style={{marginTop:23}} href="/profile">More about me ↗</a>
+          </div>
+        </section>
+        <section className="offering" aria-labelledby="offer-title"><p className="kicker">What I bring</p><h2 id="offer-title">Different skills.<br/>One point of view.</h2>
+          <div className="offer-grid">
+            <article className="offer"><h3>Strategy & Partnerships</h3><p>Finding the fit, shaping the idea, making the partnership useful.</p></article>
+            <article className="offer"><h3>Creative & Content</h3><p>From a strong concept to a clear campaign or content system.</p></article>
+            <article className="offer"><h3>Events & Experience</h3><p>Understanding how audiences move, participate and remember.</p></article>
+          </div>
+        </section>
+        <section className="contact"><div><p className="kicker">What's next?</p><h2>Let’s make something<br/><em>worth experiencing.</em></h2></div>
+          <div className="contact-links"><a href="/cv">Download CV ↗</a><a href="/contact">Get in touch ↗</a></div>
+        </section>
+        <footer className="footer"><span>© Marta Laviña 2026</span><span>Sports, brands & experiences.</span><a href="https://www.linkedin.com/in/martalavinaperez" target="_blank" rel="noreferrer">LinkedIn ↗</a></footer>
+      </div>
     </main>
-  );
+  </div>;
 }
