@@ -103,3 +103,17 @@
 .story-sources>div{display:flex;gap:11px;flex-wrap:wrap}
 .story-sources a{display:inline-block;border:1px solid var(--line);border-radius:40px;padding:11px 15px;font-size:.78rem;line-height:1.4}
 .story-sources a:hover{background:#e7e3dc}
+
+
+/* Covers currently derive from presentation exports (650–740px). Never force
+   them beyond their native size: retain clear typography without resampling. */
+.story-cover--wide img {
+ width:auto;
+ max-width:min(100%,740px);
+ height:auto;
+ max-height:540px;
+ object-fit:contain;
+}
+@media(max-width:640px) {
+ .story-cover--wide img {max-width:100%;max-height:290px}
+}
