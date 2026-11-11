@@ -45,7 +45,7 @@ export default function Home() {
               <small>{p.category}</small><strong>{p.name}</strong>
             </a>)}
             <a className="project outdoormix" href="/archive/outdoormix-winter" aria-label="OutdoorMix Winter, marketing and ticketing strategy">
-              <small>Marketing / Ticketing</small><strong>OutdoorMix Winter</strong>
+              <small>Marketing / Ticketing · Oct 2026</small><strong>OutdoorMix Winter</strong>
             </a>
           </div>
         </section>
