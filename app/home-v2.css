@@ -155,3 +155,43 @@
   .home-v2 .wave svg { width: 100%; margin: 0; }
   .home-v2 .wave text { font-size: 51px; }
 }
+
+
+/* Compact the transition between hero and work, keeping the approved visual identity. */
+.home-v2 .hero {
+  height: clamp(510px, 42vw, 590px);
+  min-height: 510px;
+  background-position: center center, center 38%;
+}
+.home-v2 .hero-inner { padding-top: clamp(56px, 6vw, 85px); }
+.home-v2 .portrait { top: 8%; }
+.home-v2 .wave {
+  margin-top: -36px;
+  height: 148px;
+  z-index: 4;
+}
+.home-v2 .wave svg { width: 100%; height: 100%; display: block; }
+.home-v2 .wave text {
+  font-size: 48px;
+  letter-spacing: -.5px;
+  font-weight: 400;
+}
+.home-v2 .content { padding-top: 0; }
+@media (max-width: 900px) and (min-width: 641px) {
+  .home-v2 .hero { height: 550px; min-height: 510px; }
+  .home-v2 .hero-inner { padding-top: 68px; }
+  .home-v2 .portrait { top: 15%; }
+  .home-v2 .wave { margin-top: -28px; height: 132px; }
+}
+@media (max-width: 640px) {
+  .home-v2 .hero {
+    height: clamp(525px, 150vw, 630px);
+    min-height: 525px;
+  }
+  .home-v2 .hero-inner { padding-top: 48px; }
+  .home-v2 .portrait { top: 48%; }
+  .home-v2 .wave { margin-top: -24px; height: 100px; }
+  .home-v2 .wave svg { width: 100%; margin: 0; }
+  .home-v2 .wave text { font-size: 50px; }
+  .home-v2 .content { padding-top: 0; }
+}
