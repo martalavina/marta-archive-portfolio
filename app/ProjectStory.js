@@ -43,6 +43,11 @@ export default function ProjectStory({ story }) {
             {section.metrics && <div className="story-metric-grid">{section.metrics.map(p=><div className="story-metric" key={p.title}><strong>{p.title}</strong><p>{p.copy}</p></div>)}</div>}
           </section>
         ))}
+        {story.sources && <aside className="story-sources" aria-label="Research sources">
+          <h2>Research & sources</h2>
+          <p>Public sources used to validate the current framework:</p>
+          <div>{story.sources.map(s=><a key={s.url} href={s.url} target="_blank" rel="noopener noreferrer">{s.label} ↗</a>)}</div>
+        </aside>}
         <div className="story-end"><blockquote>{story.closing}</blockquote><a href="/archive">Explore more work ↗</a></div>
       </main>
       <footer className="story-footer">
