@@ -4,7 +4,7 @@ const story={
  meta:'OCTOBER 2026 / ACADEMIC TEAM PROJECT',eyebrow:'SPORTS MARKETING / TICKETING / ADAPTIVE ACTIVATION',
  title:'What happens when',titleAccent:'the brief changes?',lead:'Less budget. Smaller capacity. A free competitor. The response was to change priorities, not just the spreadsheet.',
  role:'Developed October 2026 for OutdoorMix Winter 2027 / academic team project. This is a proposed plan, not event results.',
- accent:'#d6ecef',highlight:'#087f94',image:'/home-v2/cover-outdoormix.webp',wide:true,imageAlt:'OutdoorMix Winter creative title artwork from the original strategy presentation',
+ accent:'#d6ecef',highlight:'#087f94',image:'/home-v2/cover-outdoormix-fixed.svg',wide:true,imageAlt:'OutdoorMix Winter creative title artwork from the original strategy presentation',
  disclaimer:'Academic planning project for OutdoorMix Winter 2027, not a claim of a commissioned campaign or an executed ticketing result.',
  sections:[
  {label:'The new constraints',short:'The brief',title:'The original plan no longer fit the conditions.',copy:'The brief changed mid-process: the marketing budget dropped by 20%, available capacity fell and a free DJ event was planned for Saturday.',cards:[{title:'€40K → €32K',copy:'A smaller working marketing budget.'},{title:'3,000 → 2,400',copy:'Nightly capacity reduced in the revised scenario.'},{title:'Free Saturday event',copy:'An alternative with an estimated audience of around 4,000.'}]},
