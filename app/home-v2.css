@@ -43,7 +43,7 @@
 .home-v2 .canada::before{background-image:url("/home-v2/cover-canada.webp");background-position:center;background-size:cover}
 .home-v2 .celta::before{background-image:url("/home-v2/cover-celta.webp");background-position:center;background-size:cover}
 .home-v2 .outdoormix{background:#009bb2}
-.home-v2 .outdoormix::before{background-image:url("/home-v2/cover-outdoormix.webp");background-position:center;background-size:contain;background-repeat:no-repeat}
+.home-v2 .outdoormix::before{background-image:url("/home-v2/cover-outdoormix-fixed.svg");background-position:center;background-size:contain;background-repeat:no-repeat}
 .home-v2 .outdoormix::after{background:linear-gradient(0deg,rgba(8,25,36,.53),transparent 38%)}
 .home-v2 .about{padding-top:110px;display:grid;grid-template-columns:1fr 1.35fr;gap:60px}
 .home-v2 .about p{font-size:clamp(1.15rem,1.8vw,1.6rem);font-family:"Instrument Serif",serif;line-height:1.3;margin:0}
