@@ -138,3 +138,92 @@
 @media(prefers-reduced-motion:reduce) {
  .work-page *, .work-page *::before, .work-page *::after {transition:none!important}
 }
+
+
+/* Work gallery V2: consistent visual rhythm, original artwork shown in full.
+   All Work and filtered views intentionally share the same proportions. */
+.work-page .work-grid,
+.work-page .work-grid-filtered {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  column-gap:22px;
+  row-gap:38px;
+  align-items:start;
+}
+.work-page .work-card,
+.work-page .work-card-featured,
+.work-page .work-grid-filtered .work-card-featured {
+  grid-column:auto;
+  grid-row:auto;
+  min-width:0;
+}
+.work-page .work-card .work-card-art,
+.work-page .work-card-featured .work-card-art,
+.work-page .work-grid-filtered .work-card-featured .work-card-art {
+  aspect-ratio:4 / 3;
+  border-radius:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#e9e8e3;
+}
+.work-page .work-card-art img,
+.work-page .work-card:not(.work-card-pending):hover img,
+.work-page .work-card:not(.work-card-pending):focus-visible img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+  transform:none;
+  image-rendering:auto;
+}
+.work-page .work-card-art::after {background:linear-gradient(0deg,rgba(8,16,28,.30),transparent 35%)}
+.work-page .work-card-meta,
+.work-page .work-card-featured .work-card-meta {padding:12px 3px 0}
+.work-page .work-card-meta h2,
+.work-page .work-card-featured .work-card-meta h2,
+.work-page .work-grid-filtered .work-card-featured .work-card-meta h2 {
+  font-size:clamp(1.65rem,2.2vw,2.4rem);
+  line-height:1.02;
+}
+.work-page .work-card-meta p {font-size:.6rem;line-height:1.5}
+.work-page .work-card:nth-child(1) .work-card-art {background:#dfe5df}
+.work-page .work-card:nth-child(2) .work-card-art {background:#e2e9ed}
+.work-page .work-card:nth-child(3) .work-card-art {background:#eddcd9}
+.work-page .work-card:nth-child(4) .work-card-art {background:#dce8e8}
+.work-page .work-card-outdoormix .work-card-art {background:#009bb2}
+.work-page .work-card-f1 .work-card-art {background:#1b1718}
+.work-page .work-f1-art {width:100%;height:100%;padding:8%}
+.work-page .work-f1-art span {font-size:clamp(1.4rem,2.5vw,2.7rem)}
+.work-page .work-f1-art strong {font-size:clamp(1.9rem,3.7vw,4rem)}
+.work-page .work-soon {background:#f7f3ec;color:#141b31}
+.work-page .work-open {left:17px;bottom:15px}
+.work-page .work-bottom {margin-top:85px}
+@media(max-width:1000px) {
+  .work-page .work-grid,.work-page .work-grid-filtered {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:30px 16px;
+  }
+}
+@media(max-width:640px) {
+  .work-page .work-grid,.work-page .work-grid-filtered {
+    grid-template-columns:minmax(0,1fr);
+    row-gap:27px;
+  }
+  .work-page .work-card .work-card-art,
+  .work-page .work-card-featured .work-card-art,
+  .work-page .work-grid-filtered .work-card-featured .work-card-art {
+    aspect-ratio:4 / 3;
+    border-radius:18px;
+  }
+  .work-page .work-card-meta h2,
+  .work-page .work-card-featured .work-card-meta h2,
+  .work-page .work-grid-filtered .work-card-featured .work-card-meta h2 {
+    font-size:clamp(1.75rem,7.3vw,2.15rem);
+  }
+  .work-page .work-card-meta p {font-size:.61rem}
+  .work-page .work-f1-art span {font-size:clamp(1.65rem,7vw,2.4rem)}
+  .work-page .work-f1-art strong {font-size:clamp(2rem,10vw,3rem)}
+  .work-page .work-bottom {margin-top:65px}
+}
